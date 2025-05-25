@@ -5,6 +5,11 @@
 #include <QCoreApplication>
 
 #include "app.h"
+#define APP_VERSION "1.0.0"
+ 
+
+
+
 
 int main(int argc, char *argv[])
 {

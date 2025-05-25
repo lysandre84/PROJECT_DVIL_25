@@ -12,7 +12,7 @@
 #   |_______/     \_/    |______/|________/          \_/     \______/
 #
 # ----------------------------------------------------------------------------------
-# DVIL Secure 1.0 - Version sécurisée de l'API (aucune vulnérabilité intentionnelle)
+__version__ = "1.0.0"  # DVIL Secure // Version sécurisée (Une vulnérabilitées).
 # Auteur   : Lysius [VIALETTE Lysandre]
 # Date     : 15/03/2025
 # Description : API RESTful sécurisée destinée à l'apprentissage.
