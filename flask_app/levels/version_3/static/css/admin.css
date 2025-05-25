@@ -1,0 +1,201 @@
+/*
+=================================================================================
+ FICHIER       : admin.css
+ DESCRIPTION   : Styles pour le panneau d'administration (dashboard, logs, actions).
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/admin.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* Corps principal de la page d'admin */
+body {
+    margin: 0;                                         /* Pas de marge externe */
+    font-family: 'Roboto', sans-serif;                  /* Police moderne */
+    background-color: #121212;                          /* Fond sombre */
+    color: #e0e0e0;                                    /* Texte gris clair */
+    height: 100vh;                                     /* Prend tout l'écran */
+    display: flex;                                     /* Flexbox pour organisation verticale */
+    flex-direction: column;                            /* Colonnes */
+    text-align: center;                                /* Centre le texte */
+    align-items: center;                               /* Centre horizontalement */
+    overflow: hidden;                                  /* Empêche le scroll */
+}
+
+/* Effet de fond avec canvas binaire (Matrix style) */
+#binaryCanvas {
+    position: fixed;                                   /* Fixe par rapport à la fenêtre */
+    top: 0;
+    left: 0;
+    width: 100%;                                       /* Prend tout l'écran */
+    height: 100%;
+    z-index: 0;                                        /* Tout au fond */
+    opacity: 0.3;                                      /* Très transparent */
+    pointer-events: none;                              /* Ininteractif */
+}
+
+/* Barre supérieure avec le titre et le bouton logout */
+.admin-top-bar {
+    display: flex;                                     /* Alignement horizontal */
+    justify-content: space-between;                    /* Espace entre titre et logout */
+    align-items: center;                               /* Centré verticalement */
+    background: rgba(20, 20, 20, 0.95);                /* Fond noir translucide */
+    padding: 15px 20px;                                /* Espacement interne */
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);       /* Ombre rouge néon */
+    width: 100%;                                       /* Prend toute la largeur */
+    position: relative;                                /* Contexte pour z-index */
+    z-index: 1;                                        /* Devant le canvas */
+    margin-bottom: 20px;                               /* Espace sous la barre */
+}
+
+/* Titre du panneau admin */
+.admin-title {
+    font-size: 1.8rem;                                 /* Assez gros */
+    color: #ff4444;                                    /* Rouge néon */
+    margin: 0;
+}
+
+/* Bouton de déconnexion dans la barre admin */
+.admin-logout {
+    font-weight: 700;                                  /* Gras */
+    background-color: #ff4444;                         /* Rouge vif */
+    border: none;                                      /* Pas de bordure */
+    border-radius: 4px;                                /* Coins arrondis */
+    padding: 10px 15px;                                /* Taille du bouton */
+    color: #050505;                                    /* Texte foncé */
+    cursor: pointer;                                   /* Curseur main */
+    transition: background 0.3s ease;                  /* Animation couleur */
+}
+.admin-logout:hover {
+    background-color: #cc0000;                         /* Rouge plus sombre au survol */
+}
+
+/* Conteneur principal du dashboard admin */
+.admin-container {
+    background: rgba(20, 20, 20, 0.9);                 /* Fond noir translucide */
+    padding: 30px;                                     /* Espacement interne */
+    border-radius: 8px;                                /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);       /* Glow rouge néon */
+    max-width: 500px;                                  /* Largeur max */
+    width: 90%;                                        /* Largeur relative */
+    position: relative;                                /* Pour le z-index */
+    z-index: 1;                                        /* Devant le canvas */
+    margin: 0 auto;                                    /* Centré horizontalement */
+}
+
+/* Actions (ouvrir/fermer serrure) */
+.admin-actions {
+    display: flex;                                     /* Alignement horizontal */
+    justify-content: space-around;                     /* Espace autour des boutons */
+    gap: 20px;                                         /* Espacement horizontal */
+    margin: 20px 0;                                    /* Marges verticales */
+}
+/* Boutons d'action admin (hérite de .btn si besoin) */
+.btn.admin-btn {
+    background: #ff4444;                               /* Rouge vif */
+    color: #050505;                                    /* Texte foncé */
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn.admin-btn:hover {
+    background: #cc0000;                               /* Plus sombre au survol */
+}
+
+/* Liens vers les pages secondaires admin (users, logs...) */
+.admin-links {
+    margin-top: 20px;                                  /* Espace au-dessus */
+}
+.admin-link {
+    display: block;                                    /* Un lien par ligne */
+    margin: 10px auto;
+    padding: 12px 20px;
+    color: #050505;                                    /* Texte foncé */
+    text-decoration: none;                             /* Pas de soulignement */
+    background: #ff4444;                               /* Rouge vif */
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    max-width: 250px;                                  /* Largeur raisonnable */
+}
+.admin-link:hover {
+    background: #cc0000;
+}
+
+/* Bouton pour retourner à l'accueil (fixé en bas à gauche) */
+.back-home-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #444;                            /* Gris foncé */
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+}
+.back-home-btn:hover {
+    opacity: 1;
+    background-color: #cc0000;
+}
+
+/* Logo fixe en bas à droite avec effet glow */
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+    z-index: 1;
+    filter: drop-shadow(0 0 10px #ff4444);             /* Glow rouge */
+    animation: pulseGlow 1.5s infinite alternate;       /* Animation pulsée */
+}
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);                /* Grossit et tourne au survol */
+    filter: drop-shadow(0 0 20px #ff4444);             /* Glow accentué */
+}
+/* Animation de glow pulsé pour le logo */
+@keyframes pulseGlow {
+    0% {
+        filter: drop-shadow(0 0 10px #ff4444);
+    }
+    100% {
+        filter: drop-shadow(0 0 20px #cc0000);
+    }
+}
+
+/* Pied de page */
+footer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+    z-index: 1;
+}

@@ -1,0 +1,63 @@
+<!--
+=================================================================================
+ FICHIER       : index.html
+ DESCRIPTION   : Page d'accueil publique du projet DVIL (landing page, énigme, effet binaire, etc).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+ USAGE :
+ - À placer dans le dossier templates/ d'un projet Flask.
+ - Page de présentation du challenge.
+ CONTACT :
+ - Email : lysandrepro@gmail.com
+ - GitHub : https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+=================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>En attente de l’administrateur - DVIL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import de la police rétro "Press Start 2P" -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- CSS principal de la page -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <!-- Fond animé binaire violet (canvas) -->
+    <canvas id="binaryCanvas"></canvas>
+    <script src="{{ url_for('static', filename='js/binary.js') }}"></script>
+
+    <!-- (Optionnel) Overlay CRT pour effet vieux écran -->
+    <div class="crt-overlay"></div>
+
+    <!-- Conteneur central de la page d’attente -->
+    <div class="starting-container">
+        <!-- Titre principal -->
+        <h1>En attente de l’administrateur…</h1>
+        <!-- Texte de description -->
+        <div class="waiting-desc">
+            Veuillez patienter, un administrateur va bientôt activer le service.
+        </div>
+        <!-- Animation loader circulaire -->
+        <div class="loader"></div>
+        <!-- Bouton pour accéder à la connexion -->
+        <button class="connect-btn" onclick="window.location.href='/login'">Se connecter</button>
+    </div>
+
+    <!-- Logo en bas à droite (toujours visible) -->
+    <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
+
+    <!-- Pied de page, discret -->
+    <footer>
+        <span>© 2025 – Projet DVIL</span>
+    </footer>
+</body>
+</html>

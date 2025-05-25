@@ -1,0 +1,456 @@
+/home/Ad_@min
+├── bin
+│   ├── app-clavier
+│   │   ├── app-clavier
+│   │   ├── app-clavier.pro
+│   │   ├── app.cpp
+│   │   ├── app.h
+│   │   ├── app.o
+│   │   ├── centrenotifications.cpp
+│   │   ├── centrenotifications.h
+│   │   ├── centrenotifications.o
+│   │   ├── clavier.cpp
+│   │   ├── clavier.h
+│   │   ├── clavier.o
+│   │   ├── i2cdev.o
+│   │   ├── main.cpp
+│   │   ├── main.o
+│   │   ├── Makefile
+│   │   ├── moc_app.cpp
+│   │   ├── moc_app.o
+│   │   ├── moc_centrenotifications.cpp
+│   │   ├── moc_centrenotifications.o
+│   │   ├── moc_clavier.cpp
+│   │   ├── moc_clavier.o
+│   │   └── moc_predefs.h
+│   ├── app-nfc
+│   │   ├── app.cpp
+│   │   ├── app.h
+│   │   ├── app-nfc
+│   │   ├── app-nfc.pro
+│   │   ├── app.o
+│   │   ├── centrenotifications.cpp
+│   │   ├── centrenotifications.h
+│   │   ├── centrenotifications.o
+│   │   ├── gpiodev.o
+│   │   ├── main.cpp
+│   │   ├── main.o
+│   │   ├── Makefile
+│   │   ├── moc_app.cpp
+│   │   ├── moc_app.o
+│   │   ├── moc_centrenotifications.cpp
+│   │   ├── moc_centrenotifications.o
+│   │   ├── moc_nfcworker.cpp
+│   │   ├── moc_nfcworker.o
+│   │   ├── moc_pn532.cpp
+│   │   ├── moc_pn532.o
+│   │   ├── moc_predefs.h
+│   │   ├── nfcworker.cpp
+│   │   ├── nfcworker.h
+│   │   ├── nfcworker.o
+│   │   ├── pn532.cpp
+│   │   ├── pn532.h
+│   │   ├── pn532.o
+│   │   └── spidev.o
+│   ├── app-serrure
+│   │   ├── app.o
+│   │   ├── centrenotifications.o
+│   │   ├── gpiodev.o
+│   │   ├── main.o
+│   │   ├── moc_app.o
+│   │   ├── moc_centrenotifications.o
+│   │   ├── moc_serrure.o
+│   │   └── serrure.o
+│   └── rasp-io-libs
+│       ├── examples
+│       │   ├── test-gpiodev.cpp
+│       │   ├── test-i2cdev.cpp
+│       │   └── test-spidev.cpp
+│       ├── README.md
+│       └── src
+│           ├── gpiodev.cpp
+│           ├── gpiodev.h
+│           ├── i2cdev.cpp
+│           ├── i2cdev.h
+│           ├── spidev.cpp
+│           └── spidev.h
+├── documents
+├── dvil
+│   ├── arduino
+│   │   └── sketch-clavier
+│   │       └── sketch-clavier.ino
+│   ├── python
+│   │   └── readKeyboard.py
+│   └── qt
+│       ├── app-clavier
+│       │   ├── app-clavier
+│       │   ├── app-clavier.pro
+│       │   ├── app.cpp
+│       │   ├── app.h
+│       │   ├── app.o
+│       │   ├── centrenotifications.cpp
+│       │   ├── centrenotifications.h
+│       │   ├── centrenotifications.o
+│       │   ├── clavier.cpp
+│       │   ├── clavier.h
+│       │   ├── clavier.o
+│       │   ├── i2cdev.o
+│       │   ├── main.cpp
+│       │   ├── main.o
+│       │   ├── Makefile
+│       │   ├── moc_app.cpp
+│       │   ├── moc_app.o
+│       │   ├── moc_centrenotifications.cpp
+│       │   ├── moc_centrenotifications.o
+│       │   ├── moc_clavier.cpp
+│       │   ├── moc_clavier.o
+│       │   └── moc_predefs.h
+│       ├── app-nfc
+│       │   ├── app.cpp
+│       │   ├── app.h
+│       │   ├── app-nfc
+│       │   ├── app-nfc.pro
+│       │   ├── app.o
+│       │   ├── centrenotifications.cpp
+│       │   ├── centrenotifications.h
+│       │   ├── centrenotifications.o
+│       │   ├── gpiodev.o
+│       │   ├── main.cpp
+│       │   ├── main.o
+│       │   ├── Makefile
+│       │   ├── moc_app.cpp
+│       │   ├── moc_app.o
+│       │   ├── moc_centrenotifications.cpp
+│       │   ├── moc_centrenotifications.o
+│       │   ├── moc_nfcworker.cpp
+│       │   ├── moc_nfcworker.o
+│       │   ├── moc_pn532.cpp
+│       │   ├── moc_pn532.o
+│       │   ├── moc_predefs.h
+│       │   ├── nfcworker.cpp
+│       │   ├── nfcworker.h
+│       │   ├── nfcworker.o
+│       │   ├── pn532.cpp
+│       │   ├── pn532.h
+│       │   ├── pn532.o
+│       │   └── spidev.o
+│       ├── app-serrure
+│       │   ├── app.cpp
+│       │   ├── app.h
+│       │   ├── app.o
+│       │   ├── app-serrure
+│       │   ├── app-serrure.pro
+│       │   ├── centrenotifications.cpp
+│       │   ├── centrenotifications.h
+│       │   ├── centrenotifications.o
+│       │   ├── gpiodev.o
+│       │   ├── main.cpp
+│       │   ├── main.o
+│       │   ├── Makefile
+│       │   ├── moc_app.cpp
+│       │   ├── moc_app.o
+│       │   ├── moc_centrenotifications.cpp
+│       │   ├── moc_centrenotifications.o
+│       │   ├── moc_predefs.h
+│       │   ├── moc_serrure.cpp
+│       │   ├── moc_serrure.o
+│       │   ├── serrure.cpp
+│       │   ├── serrure.h
+│       │   └── serrure.o
+│       ├── rasp-io-libs
+│       │   ├── examples
+│       │   │   ├── test-gpiodev.cpp
+│       │   │   ├── test-i2cdev.cpp
+│       │   │   └── test-spidev.cpp
+│       │   ├── README.md
+│       │   └── src
+│       │       ├── gpiodev.cpp
+│       │       ├── gpiodev.h
+│       │       ├── i2cdev.cpp
+│       │       ├── i2cdev.h
+│       │       ├── spidev.cpp
+│       │       └── spidev.h
+│       └── test-clavier-cli
+│           ├── main.cpp
+│           └── test-clavier-cli.pro
+├── flask_app
+│   ├── AND
+│   ├── API.py
+│   ├── arborescence.txt
+│   ├── constraint_name,
+│   ├── cookies.txt
+│   ├── FROM
+│   ├── levels
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   └── __init__.py
+│   │   ├── serrure.log
+│   │   ├── version_0
+│   │   │   ├── app.py
+│   │   │   ├── __init__.py
+│   │   │   ├── logo
+│   │   │   │   ├── DVIL Project.webp
+│   │   │   │   └── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── app.cpython-311.pyc
+│   │   │   │   └── __init__.cpython-311.pyc
+│   │   │   ├── serrure.log
+│   │   │   ├── static
+│   │   │   │   ├── css
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── js
+│   │   │   │   └── logo
+│   │   │   └── templates
+│   │   │       ├── accueil.html
+│   │   │       ├── admin.html
+│   │   │       ├── admin_logs.html
+│   │   │       ├── admin_users.html
+│   │   │       ├── index.html
+│   │   │       ├── __init__.py
+│   │   │       ├── login1.html
+│   │   │       └── login.html
+│   │   ├── version_1
+│   │   │   ├── app.py
+│   │   │   ├── cookies.txt
+│   │   │   ├── __init__.py
+│   │   │   ├── logo
+│   │   │   ├── __pycache__
+│   │   │   │   ├── app.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── __init__.py
+│   │   │   ├── serrure.log
+│   │   │   ├── static
+│   │   │   │   ├── css
+│   │   │   │   ├── js
+│   │   │   │   └── logo
+│   │   │   └── templates
+│   │   │       ├── accueil.html
+│   │   │       ├── admin.html
+│   │   │       ├── admin_logs.html
+│   │   │       ├── admin_users.html
+│   │   │       ├── index.html
+│   │   │       └── login.html
+│   │   ├── version_2
+│   │   │   ├── APP2.py
+│   │   │   ├── app.py
+│   │   │   ├── __init__.py
+│   │   │   ├── logo
+│   │   │   │   └── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── app.cpython-311.pyc
+│   │   │   │   └── __init__.cpython-311.pyc
+│   │   │   ├── serrure.log
+│   │   │   ├── static
+│   │   │   │   ├── css
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── js
+│   │   │   │   └── logo
+│   │   │   ├── templates
+│   │   │   │   ├── accueil.html
+│   │   │   │   ├── admin.html
+│   │   │   │   ├── admin_logs.html
+│   │   │   │   ├── admin_users.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── login1.html
+│   │   │   │   └── login.html
+│   │   │   └── uploads
+│   │   │       ├── __init__.py
+│   │   │       └── test.txt
+│   │   └── version_3
+│   │       ├── APP3.py
+│   │       ├── app.py
+│   │       ├── __init__.py
+│   │       ├── logo
+│   │       │   └── __init__.py
+│   │       ├── __pycache__
+│   │       │   ├── app.cpython-311.pyc
+│   │       │   └── __init__.cpython-311.pyc
+│   │       ├── serrure.log
+│   │       ├── static
+│   │       │   ├── css
+│   │       │   ├── __init__.py
+│   │       │   ├── js
+│   │       │   └── logo
+│   │       └── templates
+│   │           ├── accueil.html
+│   │           ├── admin.html
+│   │           ├── admin_logs.html
+│   │           ├── admin_users.html
+│   │           ├── index.html
+│   │           ├── __init__.py
+│   │           ├── login1.html
+│   │           └── login.html
+│   ├── migrations
+│   │   ├── alembic.ini
+│   │   ├── env.py
+│   │   ├── __pycache__
+│   │   │   └── env.cpython-311.pyc
+│   │   ├── README
+│   │   ├── script.py.mako
+│   │   └── versions
+│   │       ├── 3b0f7b301392_ajout_pin_code_et_nfc_code.py
+│   │       └── __pycache__
+│   │           └── 3b0f7b301392_ajout_pin_code_et_nfc_code.cpython-311.pyc
+│   ├── myenv
+│   │   ├── bin
+│   │   │   ├── activate
+│   │   │   ├── activate.csh
+│   │   │   ├── activate.fish
+│   │   │   ├── Activate.ps1
+│   │   │   ├── alembic
+│   │   │   ├── dotenv
+│   │   │   ├── flask
+│   │   │   ├── gunicorn
+│   │   │   ├── mako-render
+│   │   │   ├── markdown-it
+│   │   │   ├── pip
+│   │   │   ├── pip3
+│   │   │   ├── pip3.11
+│   │   │   ├── pygmentize
+│   │   │   ├── python -> python3
+│   │   │   ├── python3 -> /usr/bin/python3
+│   │   │   └── python3.11 -> python3
+│   │   ├── include
+│   │   │   ├── python3.11
+│   │   │   └── site
+│   │   │       └── python3.11
+│   │   ├── lib
+│   │   │   └── python3.11
+│   │   │       └── site-packages
+│   │   └── pyvenv.cfg
+│   ├── __pycache__
+│   │   ├── API.cpython-311.pyc
+│   │   └── wsgi.cpython-311.pyc
+│   ├── referenced_table_name
+│   ├── requirements.txt
+│   ├── SELECT
+│   ├── serrure.log
+│   ├── table_name
+│   ├── WHERE
+│   └── wsgi.py
+├── logs
+└── Projet-DVIL
+    ├── API
+    │   ├── Configuration
+    │   │   ├── conf_mosquitto.py
+    │   │   └── systemd_api_service.py
+    │   ├── Niveau 0
+    │   │   ├── Diagramme
+    │   │   │   ├── Architecture_Globale_du_système.png
+    │   │   │   ├── Class_Diagram.png
+    │   │   │   ├── Deployment_Diagram.png
+    │   │   │   ├── diagramme_dactivité_processus_de_connexion.png
+    │   │   │   ├── diagramme_de_classe.png
+    │   │   │   ├── diagramme_de_séquence_deverouillage_de_la_serrure.png
+    │   │   │   ├── Sequence_diagrams_admin_panel.png
+    │   │   │   ├── Sequence_Diagrams_lock_unlock.png
+    │   │   │   ├── Sequence_Diagrams_login.png
+    │   │   │   └── Use_Case_Diagram.png
+    │   │   └── Documentation
+    │   │       ├── Documentation_Administrateur_DVIL.docx
+    │   │       └── Documentation_Administrateur_DVIL.pdf
+    │   ├── Niveau 1
+    │   │   ├── Diagramme
+    │   │   │   └── Diagramme de Séquence – Attaque Niveau 1.png
+    │   │   ├── Documentation
+    │   │   │   ├── Administrateur
+    │   │   │   └── Etudiant
+    │   │   ├── flask_app
+    │   │   │   ├── API_Version_1.py
+    │   │   │   ├── logo
+    │   │   │   ├── serrure.log
+    │   │   │   ├── static
+    │   │   │   └── templates
+    │   │   └── Payload
+    │   │       ├── Payload.py
+    │   │       └── Payload_Version_1.py
+    │   ├── Niveau 2
+    │   │   ├── Diagramme
+    │   │   │   ├── Diagramme de Déploiement_niveau_2.png
+    │   │   │   └── Diagramme de Séquence – Attaque (XSS + Path Traversal)_niveau_2.png
+    │   │   ├── Documentation
+    │   │   │   ├── Administrateur
+    │   │   │   └── Etudiant
+    │   │   └── Payload
+    │   │       ├── payload.py
+    │   │       └── Payload_Version_2.py
+    │   └── Niveau 3
+    │       ├── Diagramme
+    │       │   └── Attack
+    │       ├── Documentation
+    │       │   ├── Administrateur
+    │       │   └── Etudiant
+    │       └── Payload
+    │           ├── Payload.py
+    │           └── Payload_Version_3.py
+    ├── build
+    ├── docs
+    │   ├── architecture.md
+    │   └── usage.md
+    ├── Documentation
+    │   ├── Diagramme_de_Gantt.png
+    │   ├── D-VIL_Fiche_de_validation_de_projet_Option_A_IR.pdf
+    │   ├── D-VIL_Fiche_de_validation_de_projet_Option_B_ER.pdf
+    │   ├── fiches de controle.doc
+    │   └── LyceeBenoit-BtsCiel-Projet-DVIL-2025.pdf
+    ├── LICENSE
+    ├── rapport
+    │   ├── ~$OJECT_DVIL_REPPORT.docx
+    │   ├── dossier-beehoneyt-ir-2019.pdf
+    │   ├── Logo
+    │   │   ├── DVIL Project.webp
+    │   │   ├── logo_bleu.webp
+    │   │   ├── logo.png
+    │   │   └── logo_vert.webp
+    │   ├── Modele_de_rapport_avignon_universite-1.pdf
+    │   ├── Project_DVIL_Rapport.docx
+    │   ├── Project_DVIL_Rapport.pdf
+    │   └── ~WRL1353.tmp
+    ├── README.md
+    ├── Source
+    │   └── C++
+    │       └── test-clavier-cli
+    │           ├── main.cpp
+    │           └── test-clavier-cli.pro
+    └── src
+        ├── app-clavier
+        │   ├── app-clavier
+        │   ├── app-clavier.pro
+        │   ├── app.cpp
+        │   ├── app.h
+        │   ├── app.o
+        │   ├── centrenotifications.cpp
+        │   ├── centrenotifications.h
+        │   ├── centrenotifications.o
+        │   ├── clavier.cpp
+        │   ├── clavier.h
+        │   ├── clavier.o
+        │   ├── i2cdev.o
+        │   ├── main.cpp
+        │   ├── main.o
+        │   ├── Makefile
+        │   ├── moc_app.cpp
+        │   ├── moc_app.o
+        │   ├── moc_centrenotifications.cpp
+        │   ├── moc_centrenotifications.o
+        │   ├── moc_clavier.cpp
+        │   ├── moc_clavier.o
+        │   └── moc_predefs.h
+        └── app-serrure
+            ├── app.cpp
+            ├── app.h
+            ├── app-serrure.pro
+            ├── centrenotifications.cpp
+            ├── centrenotifications.h
+            ├── main.cpp
+            ├── Makefile
+            ├── moc_app.cpp
+            ├── moc_centrenotifications.cpp
+            ├── moc_predefs.h
+            ├── moc_serrure.cpp
+            ├── serrure.cpp
+            └── serrure.h
+
+112 directories, 342 files

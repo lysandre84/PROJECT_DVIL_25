@@ -1,0 +1,175 @@
+/*
+=================================================================================
+ FICHIER       : index.css
+ DESCRIPTION   : Styles pour la page index (texte tapé, curseur animé, pluie binaire fond).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création du style pour la page d'accueil rétro.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/index.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* ==============================
+   Page d’attente / Starting Page
+   ============================== */
+
+/* Style général du body (fond violet, centrage vertical/horizontal, police rétro) */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #140022;  /* Violet très sombre */
+    font-family: 'Roboto', 'Press Start 2P', cursive, sans-serif;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Canvas pluie binaire violet, fixé sur toute la page en fond */
+#binaryCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Overlay CRT optionnel, ajoute un effet "vieux moniteur" si besoin */
+.crt-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* Active ceci si tu veux des lignes horizontales façon CRT :
+    background:
+      repeating-linear-gradient(
+        rgba(184,0,255,0.08) 0px,
+        rgba(184,0,255,0.08) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+    */
+}
+
+/* Conteneur principal centré, carte violette translucide avec effet néon */
+.starting-container {
+    background: rgba(30, 0, 50, 0.85);           /* Violet foncé translucide */
+    border-radius: 16px;
+    box-shadow: 0 0 40px 6px #b800ff, 0 0 4px #a142ff; /* Glow violet électrique */
+    padding: 48px 32px 40px 32px;
+    text-align: center;
+    margin-top: 80px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    z-index: 1;                                 /* Toujours devant le canvas */
+}
+
+/* Titre principal avec glow violet */
+h1 {
+    color: #b800ff;
+    margin: 0 0 18px 0;
+    font-size: 2.1rem;
+    text-shadow: 0 0 12px #b800ff, 0 0 30px #6600a6;
+}
+
+/* Description d’attente, couleur violette douce */
+.waiting-desc {
+    color: #d7b6ff;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px #b800ff;
+}
+
+/* Loader circulaire animé (effet hacking) */
+.loader {
+    border: 6px solid #4a194a;         /* Bord violet foncé */
+    border-top: 6px solid #b800ff;     /* Bord supérieur violet néon */
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin: 28px auto 0 auto;
+    animation: spinLoader 1.2s linear infinite;
+}
+@keyframes spinLoader {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+/* Bouton "Se connecter", style violet électrique */
+.connect-btn {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #b800ff 50%, #a142ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 0;
+    width: 100%;
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 14px #b800ff99;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    text-shadow: 0 0 4px #b800ff;
+}
+.connect-btn:hover,
+.connect-btn:focus {
+    background: linear-gradient(90deg, #6600a6 50%, #b800ff 100%);
+    box-shadow: 0 0 24px #b800ffcc;
+    outline: none;
+    transform: scale(1.03);
+}
+
+/* Logo DVIL en bas à droite, discret, toujours petit et glow violet */
+.logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;  /* Taille raisonnable */
+    height: auto;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 16px #b800ff);
+    transition: transform 0.3s, filter 0.3s;
+    z-index: 3;
+}
+.logo:hover {
+    transform: scale(1.08) rotate(1deg);
+    filter: drop-shadow(0 0 24px #a142ff);
+}
+
+/* Footer violet discret en bas */
+footer {
+    margin-top: auto;
+    text-align: center;
+    color: #a142ff;
+    font-size: 0.97rem;
+    letter-spacing: 1px;
+    padding: 20px 0 10px 0;
+    text-shadow: 0 0 8px #6600a6;
+    z-index: 2;
+}

@@ -1,0 +1,190 @@
+/*
+=================================================================================
+ FICHIER       : accueil.css
+ DESCRIPTION   : Styles pour la page d'accueil utilisateur (bandeau, statuts, boutons, etc.)
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/accueil.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* Corps général de la page, applique un fond sombre et une police moderne */
+body {
+    margin: 0;                                            /* Enlève les marges par défaut */
+    font-family: 'Roboto', sans-serif;                    /* Police principale */
+    background-color: #121212;                            /* Fond sombre */
+    color: #e0e0e0;                                       /* Couleur de texte claire */
+    height: 100vh;                                        /* Hauteur 100% viewport */
+    display: flex;                                        /* Utilisation de flexbox */
+    flex-direction: column;                               /* Empilement vertical */
+}
+
+/* Barre du haut contenant le message de bienvenue et le bouton de déconnexion */
+.top-bar {
+    display: flex;                                        /* Layout horizontal */
+    justify-content: space-between;                       /* Espacement entre les éléments */
+    align-items: center;                                  /* Alignement vertical centré */
+    background: rgba(20, 20, 20, 0.95);                   /* Fond noir translucide */
+    padding: 15px 20px;                                   /* Espacement interne */
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);          /* Ombre portée vert Matrix néon */
+    margin-bottom: 20px;                                  /* Espace sous la barre */
+}
+
+/* Message de bienvenue */
+.welcome-message {
+    display: flex;                                        /* Horizontal */
+    align-items: center;                                  /* Centré verticalement */
+    gap: 8px;                                             /* Espacement entre les éléments */
+}
+
+/* Icône optionnelle dans le message de bienvenue */
+.welcome-icon {
+    font-size: 1.4rem;
+}
+
+/* Texte du message de bienvenue */
+.welcome-text {
+    font-size: 1.2rem;                                    /* Taille de police */
+    font-weight: 700;                                     /* Texte en gras */
+    color: #39ff14;                                       /* Vert Matrix néon */
+}
+
+/* Bouton de déconnexion en haut à droite */
+.top-bar .logout {
+    font-weight: 700;                                     /* Texte en gras */
+    background-color: #39ff14;                            /* Vert principal */
+    border: none;                                         /* Pas de bordure */
+    border-radius: 4px;                                   /* Coins arrondis */
+    padding: 10px 15px;                                   /* Espacement interne */
+    color: #050505;                                       /* Texte noir sur fond vert */
+    cursor: pointer;                                      /* Curseur main */
+    transition: background 0.3s ease;                     /* Animation sur fond */
+}
+.top-bar .logout:hover {
+    background-color: #179900;                            /* Vert foncé au survol */
+}
+
+/* Conteneur principal de la page */
+.container {
+    background: rgba(20, 20, 20, 0.9);                    /* Fond sombre légèrement transparent */
+    padding: 30px;                                        /* Espacement interne */
+    border-radius: 8px;                                   /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);          /* Ombre vert Matrix néon */
+    max-width: 450px;                                     /* Largeur max */
+    width: 90%;                                           /* Largeur relative */
+    margin: 0 auto;                                       /* Centre horizontalement */
+    text-align: center;                                   /* Centre le texte */
+    flex-grow: 1;                                         /* Prend l'espace vertical restant */
+    display: flex;                                        /* Flexbox pour centrer le contenu */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Statut de la serrure */
+.status-text {
+    margin: 20px 0;                                       /* Marges verticales */
+    color: #e0e0e0;                                       /* Texte gris clair */
+    font-size: 1rem;                                      /* Taille de police */
+}
+
+/* Groupe de boutons d'action pour la serrure */
+.action-buttons {
+    display: flex;                                        /* Affichage en ligne */
+    justify-content: space-around;                        /* Espace entre les boutons */
+    gap: 20px;                                            /* Espacement horizontal */
+    margin: 20px 0;                                       /* Marges verticales */
+}
+
+/* Style générique pour tous les boutons */
+.btn {
+    font-family: 'Roboto', sans-serif;                    /* Police cohérente */
+    font-size: 1rem;
+    padding: 12px 20px;                                   /* Taille du bouton */
+    border: none;                                         /* Pas de bordure */
+    border-radius: 4px;                                   /* Coins arrondis */
+    background: #39ff14;                                  /* Vert Matrix néon */
+    color: #050505;                                       /* Texte foncé */
+    cursor: pointer;
+    transition: background 0.3s ease;                     /* Animation douce sur fond */
+}
+.btn:hover {
+    background: #179900;                                  /* Vert Matrix foncé au survol */
+}
+
+/* Bouton Admin Panel (spécifique) */
+.admin-btn {
+    margin-top: 10px;                                     /* Espace au-dessus */
+    background-color: #39ff14;
+    color: #050505;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+.admin-btn:hover {
+    background-color: #116600;                            /* Vert très foncé au survol */
+}
+
+/* Message d'erreur */
+.error-message {
+    color: #39ff14;                                       /* Vert Matrix principal */
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+/* Logo affiché en bas à droite */
+.logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #39ff14);                /* Effet glow vert */
+    transition: transform 0.3s ease, filter 0.3s ease;    /* Animation douce */
+    animation: pulseGlow 1.5s infinite alternate;         /* Animation pulsée */
+}
+.logo:hover {
+    transform: scale(1.1);                                /* Agrandi au survol */
+    filter: drop-shadow(0 0 20px #39ff14);                /* Glow plus fort */
+}
+/* Animation de glow pulsé pour le logo */
+@keyframes pulseGlow {
+    0% {
+        filter: drop-shadow(0 0 10px #39ff14);
+    }
+    100% {
+        filter: drop-shadow(0 0 20px #179900);
+    }
+}
+
+/* Pied de page centré en bas */
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    padding: 10px 0;
+}

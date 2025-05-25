@@ -1,0 +1,66 @@
+<!--
+=================================================================================
+ FICHIER       : index.html
+ DESCRIPTION   : Page d'accueil publique du projet DVIL (landing page, énigme, effet binaire, etc).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+ USAGE :
+ - À placer dans le dossier templates/ d'un projet Flask.
+ - Page de présentation du challenge.
+ CONTACT :
+ - Email : lysandrepro@gmail.com
+ - GitHub : https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+=================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base -->
+    <meta charset="UTF-8">
+    <title>Challenge numéro 3 - API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Police rétro pour effet old school -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<!-- Canvas pour la pluie binaire (Matrix) -->
+<canvas id="binaryCanvas"></canvas>
+<script src="{{ url_for('static', filename='js/binary.js') }}"></script>
+
+<!-- Overlay CRT optionnel pour style "vieux moniteur" -->
+<div class="crt-overlay"></div>
+
+<body>
+    <!-- Logo en bas à droite -->
+    <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
+
+    <!-- Conteneur principal du challenge -->
+    <div class="container">
+        <h1>Challenge numéro 3 - API</h1>
+        <p>Bienvenue dans le projet DVIL&nbsp;!</p>
+        <p>Explorez les défis et apprenez en maîtrisant les fondamentaux de la cybersécurité.</p>
+    </div>
+
+    <!-- Zone d'énigme (texte tapé en JS) -->
+    <div class="challenge">
+        <span id="enigme"></span>
+    </div>
+
+    <!-- Footer centré en bas -->
+    <footer>
+        <p>© 2025 - Projet DVIL</p>
+    </footer>
+
+    <!-- Script JS qui gère le texte tapé de l'énigme -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

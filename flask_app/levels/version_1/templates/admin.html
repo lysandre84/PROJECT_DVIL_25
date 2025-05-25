@@ -1,0 +1,88 @@
+<!--
+=================================================================================
+ FICHIER       : admin.html
+ DESCRIPTION   : Interface principale d’administration (panel admin DVIL).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+ USAGE :
+ - URL d’accès : https://localhost:5000/admin.html
+ - Technologies utilisées : HTML5
+ - Dépendances :  Bootstrap, jQuery
+ SECURITÉ :
+ - Points sensibles :
+ - Mesures mises en place :
+ CONTACT :
+ - Email : lysandrepro@gmail.com
+ - GitHub : https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+=================================================================================
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Encodage et titre -->
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <!-- Import de la police Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Inclusion de ton fichier CSS principal pour le panel admin -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+  <!-- Canvas binaire en arrière-plan (effet matrix/hack) -->
+  <canvas id="binaryCanvas"></canvas>
+
+  <!-- Barre du haut : titre + bouton logout -->
+  <header class="admin-top-bar">
+    <!-- Titre principal de la page admin -->
+    <h1 class="admin-title"> Admin Panel</h1>
+    <!-- Bouton de déconnexion (logout) -->
+    <button id="admin-logout" class="btn admin-logout"> Se déconnecter</button>
+  </header>
+
+  <!-- Conteneur principal de la zone admin -->
+  <div class="admin-container">
+    <!-- Message d’accueil -->
+    <p>Bienvenue dans le panneau d'administration.</p>
+
+    <!-- Groupe de boutons pour actions principales sur la serrure -->
+    <div class="admin-actions">
+      <!-- Bouton pour ouvrir la serrure -->
+      <button id="admin-unlock" class="btn admin-btn"> Ouvrir la serrure</button>
+      <!-- Bouton pour fermer la serrure -->
+      <button id="admin-lock" class="btn admin-btn"> Fermer la serrure</button>
+      <!-- Bouton pour reset le challenge (remise à zéro) -->
+     <!-- <button id="reset-challenge-btn" class="btn admin-btn">Reset Challenge</button> -->
+    </div>
+
+    <!-- Liens pour accéder à la gestion utilisateurs ou logs -->
+    <div class="admin-links">
+      <!-- Lien vers la page de gestion des utilisateurs -->
+      <a href="/admin/users" class="admin-link"> Gestion des utilisateurs</a>
+      <!-- Lien vers la page des logs -->
+      <a href="/admin/logs" class="admin-link"> Voir les logs</a>
+    </div>
+  </div>
+
+  <!-- Bouton de retour à l’accueil, positionné en bas à gauche -->
+  <a href="/accueil" class="back-home-btn">⬅️ Retour Accueil</a>
+
+  <!-- Logo en bas à droite (fixé) -->
+  <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo" />
+
+  <!-- Footer avec copyright -->
+  <footer>
+    <p>© 2025 - Admin Panel</p>
+  </footer>
+
+  <!-- Script pour l’effet binaire de fond -->
+  <script src="{{ url_for('static', filename='js/binary.js') }}"></script>
+  <!-- Script JS spécifique à l’admin (pour lock/unlock/challenge/reset, etc.) -->
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

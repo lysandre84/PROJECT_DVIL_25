@@ -1,0 +1,139 @@
+<!---
+=================================================================================
+ FICHIER       : admin_users.html
+ DESCRIPTION   : Page de gestion des utilisateurs (admin), avec scroll vertical pour la table.
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - URL d’accès : https://localhost:5000/admin_users.html
+ - Technologies utilisées : HTML5
+ - Dépendances :  Bootstrap, jQuery
+
+ SECURITÉ :
+ - Points sensibles :
+ - Mesures mises en place :
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+--->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Utilisateurs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_users.css') }}">
+</head>
+<body>
+
+<div class="admin-container">
+    <h1> Gestion des Utilisateurs</h1>
+
+    <!-- Bouton pour ajouter un user -->
+    <button id="btn-add-user" class="btn-add">➕ Ajouter un utilisateur</button>
+
+    <!-- SCROLL VERTICAL UNIQUEMENT SUR LA TABLE -->
+    <div class="users-table-container">
+      <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom d'utilisateur</th>
+                <th>Rôle</th>
+                <th>PIN code</th>
+                <th>NFC code</th>
+                <th>TAG</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.role }}</td>
+                <td contenteditable="true" class="editable"
+                    data-user-id="{{ user.id }}" data-field="pin_code">{{ user.pin_code or "" }}</td>
+                <td contenteditable="true" class="editable"
+                    data-user-id="{{ user.id }}" data-field="nfc_code">{{ user.nfc_code or "" }}</td>
+                <td contenteditable="true" class="editable"
+                    data-user-id="{{ user.id }}" data-field="tag">{{ user.tag or "" }}</td>
+                <td>
+                  <div class="action-btns">
+                    <button class="btn-edit" data-id="{{ user.id }}" data-username="{{ user.username }}" data-role="{{ user.role }}">
+                      ✏️ Modifier
+                    </button>
+                    <button class="btn-delete" data-id="{{ user.id }}" data-username="{{ user.username }}">
+                      ❌ Supprimer
+                    </button>
+                  </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+</div>
+
+<!-- Bouton/lien de retour en bas à gauche -->
+<a href="/admin" class="back-return-btn">⬅️ Retour</a>
+
+<!-- Pop-up / modale pour ajouter un user -->
+<div id="modal-add" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Ajouter un utilisateur</h2>
+    <label>Nom d'utilisateur:</label>
+    <input type="text" id="add-username">
+    <label>Mot de passe:</label>
+    <input type="password" id="add-password">
+    <label>Rôle:</label>
+    <select id="add-role">
+      <option value="user">user</option>
+      <option value="admin">admin</option>
+    </select>
+    <button id="btn-add-submit">Valider</button>
+    <button id="btn-add-cancel">Annuler</button>
+  </div>
+</div>
+
+<!-- Pop-up / modale pour modifier user -->
+<div id="modal-edit" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Modifier l'utilisateur</h2>
+    <input type="hidden" id="edit-user-id">
+    <p id="edit-username"></p>
+    <label>Nouveau mot de passe (optionnel):</label>
+    <input type="password" id="edit-password">
+    <label>Nouveau rôle (optionnel):</label>
+    <select id="edit-role">
+      <option value="">(Inchangé)</option>
+      <option value="user">user</option>
+      <option value="admin">admin</option>
+    </select>
+    <button id="btn-edit-submit">Enregistrer</button>
+    <button id="btn-edit-cancel">Annuler</button>
+  </div>
+</div>
+
+<!-- Logo -->
+<img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
+
+<footer>
+    <p>© 2025 - Admin Panel</p>
+</footer>
+
+<!-- Ton script JS -->
+<script src="{{ url_for('static', filename='js/admin_users.js') }}"></script>
+</body>
+</html>

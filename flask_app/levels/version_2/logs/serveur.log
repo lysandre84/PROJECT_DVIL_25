@@ -1,0 +1,8 @@
+2025-05-25 20:49:26,049 [SERVEUR] Déverrouillage par API
+2025-05-25 20:49:26,057 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-25 20:49:26,069 [SERVEUR] Status consulté (déverrouillée)
+2025-05-25 20:57:54,685 [SERVEUR] [MQTT] Connecté au broker
+2025-05-25 20:58:30,449 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-25 20:58:30,464 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-25 20:58:33,985 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-25 20:58:33,988 [SERVEUR] [MQTT] Serrure => locked=False

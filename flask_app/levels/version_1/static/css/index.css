@@ -1,0 +1,182 @@
+/*
+=================================================================================
+ FICHIER       : index.css
+ DESCRIPTION   : Styles pour la page index (texte tapé, curseur animé, pluie binaire fond).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création du style pour la page d'accueil rétro.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/index.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* Corps de la page, style rétro Matrix hackeur */
+body {
+  margin: 0;                                            /* Pas de marge */
+  font-family: 'Press Start 2P', cursive;               /* Police rétro */
+  background-color: #050505;                            /* Fond noir profond */
+  color: #39ff14;                                       /* Vert Matrix néon */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;                               /* Padding inclus dans largeur */
+  min-height: 100vh;                                    /* Prend toute la hauteur */
+}
+
+/* Conteneur principal centré avec glow vert Matrix */
+.container {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 10px;
+  background: rgba(5, 5, 5, 0.9);                      /* Fond noir translucide */
+  box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14;      /* Ombre vert Matrix néon */
+  backdrop-filter: blur(5px);                          /* Flou d'arrière-plan */
+  margin: 50px auto 0 auto;                            /* Centré verticalement */
+}
+
+/* Titre principal avec effet glow Matrix et rétro */
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+  color: #39ff14;                                      /* Vert Matrix néon */
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;     /* Glow Matrix néon */
+}
+
+/* Paragraphe stylé rétro Matrix */
+p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #39ff14;                                      /* Vert Matrix néon */
+  text-shadow: 0 0 5px #39ff14;                        /* Glow Matrix subtil */
+}
+
+/* Zone d'affichage de l'énigme au centre */
+.challenge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* Texte tapé de l'énigme, gère multi-lignes et effet curseur Matrix */
+#enigme {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: #39ff14;                                      /* Vert Matrix néon */
+  text-shadow: 0 0 5px #39ff14;                        /* Glow Matrix subtil */
+  max-width: 90%;
+  white-space: pre-wrap;                               /* Permet multi-lignes */
+  word-wrap: break-word;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Curseur clignotant à la baseline du texte énigme, version Matrix */
+#enigme::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1em;
+  background: #39ff14;                                 /* Vert Matrix néon */
+  margin-left: 2px;
+  animation: blink 0.8s infinite alternate;
+  vertical-align: baseline;
+}
+@keyframes blink {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Footer fixe centré en bas de la page */
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  color: #39ff14;                                      /* Vert Matrix néon */
+  text-align: center;
+}
+
+/* Canvas d'effet "pluie binaire" en fond Matrix */
+#binaryCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;                                         /* Passe en fond */
+  opacity: 0.3;                                        /* Légère transparence */
+  pointer-events: none;                                /* Pas d'interaction */
+}
+
+/* Overlay CRT (effet TV rétro Matrix) */
+.crt-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 70%;
+  height: 80%;
+  pointer-events: none;
+  /* Pour un effet CRT lignes vertes, décommente la section suivante */
+  /*
+  background:
+    repeating-linear-gradient(
+      rgba(57, 255, 20, 0.07) 0px,                     /* Vert Matrix faible */
+      rgba(57, 255, 20, 0.07) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  */
+}
+
+/* Logo en bas à droite avec glow Matrix rétro */
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #39ff14);               /* Glow Matrix */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1) rotate(2deg);                  /* Effet hover Matrix */
+  filter: drop-shadow(0 0 20px #39ff14);               /* Glow Matrix plus fort */
+}
+
+/* Effet glitch Matrix sur titre et paragraphe */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 5px #39ff14, -2px -2px 5px #aaffaa; /* Ombres Matrix */
+  }
+  100% {
+    text-shadow: -2px -2px 5px #39ff14, 2px 2px 5px #aaffaa;
+  }
+}
+h1, p {
+  animation: glitch 0.8s infinite alternate;            /* Animation Matrix */
+}

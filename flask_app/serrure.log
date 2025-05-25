@@ -1,0 +1,1660 @@
+2025-05-17 00:41:57,899 [INFO] [MQTT] Connecté au broker
+2025-05-17 00:41:57,899 [INFO] [MQTT] Connecté au broker
+2025-05-17 00:41:57,900 [INFO] [MQTT] Connecté au broker
+2025-05-17 00:45:35,300 [INFO] [MQTT] Connecté au broker
+2025-05-17 00:45:35,309 [INFO] [MQTT] Connecté au broker
+2025-05-17 00:45:35,311 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:08:09,133 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:08:51,615 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:08:52,674 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:08:52,675 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:09:50,033 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:10:04,540 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:10:04,548 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:10:04,558 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:11:27,139 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:11:27,155 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:11:27,155 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:12:04,504 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:12:04,508 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:12:04,654 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:27:30,103 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:27:30,125 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:27:30,229 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:28:04,784 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:33:00,635 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:33:00,726 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:33:00,820 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:33:13,423 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:33:25,811 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:34:22,537 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:34:22,540 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:34:22,658 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:34:48,823 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:34:48,850 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:34:48,865 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:35:16,969 [INFO] [API] Connexion de PentesterLab
+2025-05-17 01:36:49,615 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:36:49,636 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:36:49,688 [INFO] [MQTT] Connecté au broker
+2025-05-17 01:36:58,109 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:37:06,769 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:37:09,758 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:37:10,400 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:37:10,454 [ERROR] Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1698, "Access denied for user 'dvil_admin'@'localhost'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask_limiter/extension.py", line 1314, in __inner
+    return cast(R, flask.current_app.ensure_sync(obj)(*a, **k))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 309, in login
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 675, in __init__
+    self.__connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    with util.safe_reraise():
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/pool/base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1698, "Access denied for user 'dvil_admin'@'localhost'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-17 01:37:10,995 [INFO] ratelimit 5 per 1 minute (192.168.1.35) exceeded at endpoint: login
+2025-05-17 01:37:11,053 [INFO] ratelimit 5 per 1 minute (192.168.1.35) exceeded at endpoint: login
+2025-05-17 01:37:12,014 [INFO] ratelimit 5 per 1 minute (192.168.1.35) exceeded at endpoint: login
+2025-05-17 01:37:39,327 [INFO] ratelimit 5 per 1 minute (192.168.1.35) exceeded at endpoint: login
+2025-05-18 13:24:20,104 [ERROR] Error: Path doesn't exist: '/home/Ad_@min/flask_app/migrations'.  Please use the 'init' command to create a new scripts folder.
+2025-05-18 13:24:25,463 [INFO] [MQTT] Connecté au broker
+2025-05-18 13:24:25,477 [ERROR] Error: Path doesn't exist: '/home/Ad_@min/flask_app/migrations'.  Please use the 'init' command to create a new scripts folder.
+2025-05-18 13:53:44,662 [INFO] [MQTT] Connecté au broker
+2025-05-18 13:53:44,682 [INFO] [MQTT] Connecté au broker
+2025-05-18 13:53:44,780 [INFO] [MQTT] Connecté au broker
+2025-05-18 14:05:38,702 [INFO] [MQTT] Connecté au broker
+2025-05-18 14:05:38,703 [INFO] [MQTT] Connecté au broker
+2025-05-18 14:05:38,703 [INFO] [MQTT] Connecté au broker
+2025-05-18 14:07:29,003 [INFO] [MQTT] Connecté au broker
+2025-05-22 14:37:46,499 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:37:47,671 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:37:59,359 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:37:59,361 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:37:59,424 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:00,369 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:00,375 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:00,433 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:02,373 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:02,379 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:02,437 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:06,378 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:06,386 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:06,446 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:14,382 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:14,391 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 14:38:14,450 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:15,485 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:15,487 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:15,497 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:16,516 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:16,516 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:16,517 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:18,522 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:18,524 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:18,525 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:22,528 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:22,529 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:22,530 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:30,534 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:30,535 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:30,536 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:46,539 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:46,541 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:03:46,543 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:04:18,546 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:04:18,548 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:04:18,550 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:05:22,552 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:05:22,553 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:05:22,556 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:07:22,557 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:07:22,559 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:07:22,561 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:09:22,562 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:09:22,564 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:09:22,566 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:23,280 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:23,327 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:23,465 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:24,286 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:24,338 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:24,471 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:26,290 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:26,344 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:26,476 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:30,295 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:30,482 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:30,546 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:38,300 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:38,486 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:38,551 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:54,304 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:54,491 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:10:54,556 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:11:26,311 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:11:26,496 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:11:26,560 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:12:30,319 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:12:30,501 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:12:30,565 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:30,601 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:30,650 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:30,711 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:31,605 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:31,654 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:31,717 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:33,610 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:33,658 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:33,722 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:37,614 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:37,674 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:37,727 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:45,619 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:45,733 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:13:45,860 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:14:01,624 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:14:01,737 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:14:01,866 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:14:33,629 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:14:33,742 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:14:33,872 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:15:37,634 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:15:37,746 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:15:37,879 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:16,888 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:16,918 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:17,029 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:17,904 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:17,933 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:18,040 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:19,909 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:19,939 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:20,047 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:23,914 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:23,943 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:24,051 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:31,919 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:31,948 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:32,056 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:47,923 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:47,952 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:17:48,060 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:18:19,928 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:18:19,957 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:18:20,065 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:06,066 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:06,099 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:06,210 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:07,072 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:07,112 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:07,215 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:09,077 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:09,117 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:09,220 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:13,082 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:13,122 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:13,224 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:21,086 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:21,126 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:21,230 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:37,091 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:37,131 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:19:37,234 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:20:09,096 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:20:09,135 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:20:09,239 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:21:13,101 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:21:13,140 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:21:13,245 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:36,461 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:36,468 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:36,473 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:37,472 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:37,480 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:37,481 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:39,477 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:39,484 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:39,485 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:43,489 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:43,491 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:43,678 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:51,495 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:51,563 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:22:51,682 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:07,500 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:07,568 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:07,686 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:21,282 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:21,303 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:21,385 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:22,287 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:22,312 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:22,399 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:24,291 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:24,316 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:24,404 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:28,296 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:28,321 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:28,409 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:36,300 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:36,325 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:36,414 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:52,305 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:52,330 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:23:52,418 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:24,310 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:24,334 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:24,423 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:42,514 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:42,547 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:42,670 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:43,526 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:43,559 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:43,676 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:45,531 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:45,563 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:45,681 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:49,535 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:49,568 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:49,685 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:57,540 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:57,572 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:24:57,690 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:25:13,545 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:25:13,577 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:25:13,695 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:25:45,549 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:25:45,582 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:25:45,699 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:26:49,555 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:26:49,587 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:26:49,704 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:33,131 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:33,235 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:33,284 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:34,140 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:34,250 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:34,296 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:36,145 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:36,254 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:36,300 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:40,716 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:40,721 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:40,722 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:48,728 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:48,731 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:28:48,732 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:29:04,733 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:29:04,738 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:29:04,738 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:29:36,737 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:29:36,743 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:29:36,744 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:30:40,743 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:30:40,750 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:30:40,750 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:32:40,747 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:32:40,756 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:32:40,757 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:34:40,754 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:34:40,761 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:34:40,761 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:28,683 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:28,682 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:28,873 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:29,689 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:29,699 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:29,878 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:31,694 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:31,703 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:31,883 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:35,698 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:35,708 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:35,888 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:43,703 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:43,712 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:44,262 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:59,708 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:35:59,717 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:36:00,267 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:36:31,713 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:36:31,722 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:36:32,272 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:37:35,717 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:37:35,727 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:37:36,277 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:39:35,722 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:39:35,732 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:39:36,768 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:41:35,726 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:41:35,735 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:41:36,772 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:43:35,730 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:43:35,739 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:43:36,777 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:30,493 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:30,500 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:30,572 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:31,505 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:31,509 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:31,578 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:33,510 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:33,514 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:33,583 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:37,514 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:37,518 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:37,586 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:45,518 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:45,522 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:44:45,590 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:01,522 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:01,527 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:01,595 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:29,043 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:29,130 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:29,284 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:30,049 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:30,133 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:30,289 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:32,054 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:32,138 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:32,293 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:36,059 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:36,142 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:36,298 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:44,063 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:44,147 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:45:44,302 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:00,068 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:00,151 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:00,307 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:26,103 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:26,112 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:26,177 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/levels/version_0/app.py", line 274, in home
+    return render_template("index.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/Ad_@min/flask_app/levels/version_0/templates/index.html", line 49, in top-level template code
+    <img src="{{ url_for('logo', filename='logo/logo.png') }}" class="logo" alt="logo">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Ad_@min/flask_app/myenv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'logo' with values ['filename']. Did you mean 'logout' instead?
+2025-05-22 15:46:26,274 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:27,112 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:27,128 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:27,279 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:29,117 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:29,132 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:29,285 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:33,122 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:33,137 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:33,289 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:41,126 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:41,142 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:41,293 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:57,131 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:46:57,298 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:01,465 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:02,471 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:04,476 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:08,482 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:16,486 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:24,293 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:24,345 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:24,473 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:25,309 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:25,362 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:25,530 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:27,313 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:27,367 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:27,542 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:31,318 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:31,373 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:31,547 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:39,323 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:39,379 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:39,552 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:55,327 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:55,384 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:47:55,556 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:48:27,332 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:48:27,388 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:48:27,561 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:31,337 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:31,393 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:31,567 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:49,129 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:49,241 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:49,290 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:50,142 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:50,250 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:50,304 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:52,147 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:52,254 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:52,309 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:56,151 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:56,259 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:49:56,313 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:04,155 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:04,263 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:04,318 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:12,093 [INFO] [API] Connexion de PentesterLab
+2025-05-22 15:50:20,160 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:20,268 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:20,322 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:52,168 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:52,273 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:50:52,327 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:51:56,173 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:51:56,278 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:51:56,333 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:53:56,179 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:53:56,283 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:53:56,338 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:55:56,184 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:55:56,287 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:55:56,342 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:57:56,189 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:57:56,296 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:57:56,347 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:59:56,194 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:59:56,301 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 15:59:56,351 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:01:56,198 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:01:56,305 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:01:56,355 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:03:56,203 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:03:56,309 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:03:56,365 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:05:56,208 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:05:56,313 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:05:56,370 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:07:56,212 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:07:56,318 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:07:56,765 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:09:56,216 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:09:56,322 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:09:56,770 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:11:56,221 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:11:56,327 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:11:56,774 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:13:56,229 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:13:56,331 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:13:56,779 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:15:56,234 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:15:56,336 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:15:56,784 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:17:56,239 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:17:56,341 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:17:57,034 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:19:53,542 [INFO] [API] Connexion de PentesterLab
+2025-05-22 16:19:56,243 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:19:56,346 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:19:57,040 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:21:56,248 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:21:56,350 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:23:56,252 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:23:56,358 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:25:56,257 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:25:56,364 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:27:56,262 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:27:56,370 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:29:56,267 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:29:56,375 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:31:56,272 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:31:56,380 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:33:56,276 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:33:56,387 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:35:56,281 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:35:56,391 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:37:56,286 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:37:56,396 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:39:56,291 [ERROR] [MQTT] Échec de connexion, code=5
+2025-05-22 16:39:56,400 [ERROR] [MQTT] Échec de connexion, code=5

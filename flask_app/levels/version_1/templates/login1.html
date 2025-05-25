@@ -1,0 +1,81 @@
+<!---
+=================================================================================
+ FICHIER       : login.html
+ DESCRIPTION   : Brève description du rôle de ce fichier.
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - URL d’accès : https://<IP>:5000/login.html
+ - Technologies utilisées : HTML5
+ - Dépendances :  Bootstrap, jQuery
+
+ SECURITÉ :
+ - Points sensibles :
+ - Mesures mises en place :
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+--->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+    <div class="login-container">
+        <h1> Connexion</h1>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- 🔘 Bouton de connexion stylisé -->
+            <button type="submit" class="btn">
+                <span class="btn-text">Se connecter</span>
+                <span class="btn-loader"></span>
+            </button>
+        </form>
+
+        <!-- 🔹 Bouton Aller à l'accueil (Caché par défaut) -->
+        <button id="go-to-accueil" class="btn-accueil" style="display: none;" onclick="window.location.href='/accueil'">
+            Aller à l'accueil 
+        </button>
+    </div>
+
+    <!-- Logo en bas à droite -->
+    <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
+
+    <footer>
+        <p>© 2025 - Admin Panel</p>
+    </footer>
+
+    <!-- Inclusion du script séparé -->
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>

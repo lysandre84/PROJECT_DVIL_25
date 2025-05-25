@@ -1,0 +1,77 @@
+<!--
+=================================================================================
+ FICHIER       : accueil.html
+ DESCRIPTION   : Page d'accueil de l'utilisateur connecté, avec statut de la serrure.
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+ USAGE :
+ - À placer dans le dossier templates/ d'un projet Flask.
+ - Affiche le statut de la serrure, permet d'ouvrir/fermer, et accès admin.
+ CONTACT :
+ - Email : lysandrepro@gmail.com
+ - GitHub : https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+=================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées principales de la page -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <!-- Import de la police Roboto depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Feuille de style personnalisée -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/accueil.css') }}">
+</head>
+<body>
+
+    <!-- Barre du haut avec message de bienvenue et bouton Déconnexion -->
+    <header class="top-bar">
+        <div class="welcome-message">
+            <span class="welcome-text">Bienvenue, <span id="username">Utilisateur</span></span>
+        </div>
+        <button id="logout" class="btn logout top-right"> Se déconnecter</button>
+    </header>
+
+    <!-- Conteneur principal de la page -->
+    <div class="container">
+        <!-- Statut de la serrure -->
+        <div>
+            <strong>Statut de la serrure :</strong>
+            <span id="serrure-status">Chargement...</span>
+        </div>
+        <!-- Boutons d'action pour contrôler la serrure -->
+        <div class="action-buttons">
+            <button id="unlock-door" class="btn">🔓 Ouvrir la serrure</button>
+            <button id="lock-door" class="btn">🔒 Fermer la serrure</button>
+        </div>
+        <!-- Bouton Admin Panel, visible seulement si l'utilisateur est admin -->
+        <button id="admin-panel" class="btn admin-btn" style="display: none;" onclick="window.location.href='/admin'">
+            Admin Panel
+        </button>
+        <!-- Message d'erreur (caché par défaut) -->
+        <p id="error-message" class="error-message" style="display: none;">
+            Erreur de connexion.
+        </p>
+    </div>
+
+    <!-- Logo affiché en bas à droite -->
+    <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
+
+    <!-- Pied de page (footer) -->
+    <footer>
+        <p>© 2025 - Système Utilisateur</p>
+    </footer>
+
+    <!-- Script JS spécifique à cette page -->
+    <script src="{{ url_for('static', filename='js/accueil.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/*
+=================================================================================
+ FICHIER       : style.css
+ DESCRIPTION   : Styles généraux pour la page (effet hacker/terminal, animations).
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/style.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles :
+ - Mesures mises en place :
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* =====================================
+   Corps de la page : style terminal/hacker bleu
+   ===================================== */
+body {
+    margin: 0;                                 /* Supprime les marges par défaut */
+    font-family: 'Press Start 2P', cursive;    /* Police rétro style terminal */
+    background-color: #0a0a18;                 /* Fond très sombre bleu */
+    color: #00cfff;                            /* Cyan fluo pour le texte principal */
+    height: 100vh;                             /* Pleine hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;                    /* Empile les éléments verticalement */
+    justify-content: center;                   /* Centre verticalement */
+    align-items: center;                       /* Centre horizontalement */
+    padding: 20px;                             /* Padding pour le confort */
+    box-sizing: border-box;                    /* Le padding ne déborde pas */
+}
+
+/* =====================================
+   Conteneur principal : effet cadre néon/terminal bleu
+   ===================================== */
+.container {
+    text-align: center;                        /* Centre le texte dans le conteneur */
+    padding: 20px;
+    width: 100%;                              /* Prend toute la largeur possible */
+    max-width: 1000px;                        /* Largeur maxi */
+    border-radius: 10px;
+    background: rgba(10, 18, 32, 0.8);        /* Fond sombre bleu transparent */
+    box-shadow: 0 0 30px #00cfff, 0 0 60px #00cfff; /* Double glow bleu */
+    backdrop-filter: blur(5px);                /* Floute le fond derrière */
+    margin: 0 auto;                            /* Centre horizontalement */
+    margin-top: 50px;                          /* Décale du haut */
+}
+
+/* =====================================
+   Titres & Paragraphes en bleu fluo
+   ===================================== */
+h1, .pacman-title {
+    font-size: 1.8rem;                         /* Titre plus grand */
+    margin: 0;
+    margin-bottom: 15px;
+    color: #00cfff;                            /* Bleu fluo */
+    text-shadow: 0 0 10px #00cfff, 0 0 20px #00bfff; /* Double glow */
+}
+
+p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #00cfff;                            /* Bleu fluo */
+    text-shadow: 0 0 5px #00bfff;              /* Glow bleu */
+}
+
+/* =====================================
+   Footer (pied de page discret en bas)
+   ===================================== */
+footer {
+    font-size: 0.6rem;                         /* Petit texte */
+    color: #1b9fc1;                            /* Bleu/gris foncé */
+    text-align: center;
+    margin-top: auto;                          /* Colle en bas avec flex */
+}
+
+/* =====================================
+   Section de l'énigme (centrée & animée)
+   ===================================== */
+.challenge {
+    position: relative;
+    text-align: center;
+    height: 100vh;                             /* Pleine hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* =====================================
+   Animation "écriture" sur #enigme
+   ===================================== */
+#enigme {
+    display: inline-block;
+    position: relative;
+    animation: typing 10s steps(50, end) forwards; /* Animation type machine à écrire */
+    white-space: nowrap;                        /* Pas de retour à la ligne */
+    overflow: hidden;                           /* Masque le texte qui déborde */
+    border-right: 2px solid #00cfff;            /* Curseur bleu */
+    color: #fff;                                /* Texte blanc pour l'énigme */
+    text-shadow: 0 0 5px #00cfff;               /* Glow blanc/bleu type "hacker" */
+}
+
+/* Animation de frappe sur le texte */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* =====================================
+   Styles pour le titre Pac-Man (optionnel)
+   ===================================== */
+.pacman-title {
+    /* Déjà défini plus haut, inclus pour compat */
+}
+
+/* =====================================
+   Texte animé avec effet "hacker"
+   ===================================== */
+.animated-text {
+    display: inline-block;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px #00cfff;
+    transition: all 0.3s ease;                 /* Effet doux au survol */
+}
+
+/* Effet d'ombre sur chaque lettre */
+.text {
+    display: inline-block;
+    position: relative;
+}
+
+/* Ombre bleu/cyan et floue sur chaque lettre pour un effet alpha */
+.text::after {
+    content: attr(data-text);                  /* Réutilise le texte pour l'effet */
+    position: absolute;
+    left: 1px;
+    top: 0;
+    color: rgba(0, 207, 255, 0.5);             /* Cyan transparent */
+    filter: blur(3px);                         /* Effet flou */
+    transform: translateZ(0);
+}
+
+/* Animation au survol du texte animé */
+.animated-text:hover .text {
+    animation: splitAlpha 0.5s forwards;
+}
+
+/* Keyframes pour faire "apparaître" chaque lettre */
+@keyframes splitAlpha {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

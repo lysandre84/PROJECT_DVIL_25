@@ -1,0 +1,12 @@
+# Fichiers/dossiers perso à ne PAS versionner
+.bash*
+.cache/
+.gitconfig
+.lesshst
+.local/
+.mysql_history
+.profile
+.python_history
+.ssh/
+.sudo_as_admin_successful
+dotfiles_backup/

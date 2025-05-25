@@ -1,0 +1,174 @@
+/*
+=================================================================================
+ FICHIER       : admin_logs.css
+ DESCRIPTION   : Feuille de style pour la page d'administration des logs (affichage et reset).
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/admin_logs.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* ======= Admin Logs Page - Matrix ======= */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.admin-container {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+    max-width: 900px;
+    width: 90%;
+    overflow-x: auto;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2rem;
+    color: #39ff14;
+}
+
+/* Zone d'affichage des logs */
+#log-container {
+    height: 400px;
+    overflow-y: auto;
+    border: 2px solid rgba(57, 255, 20, 0.5);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Style ligne de log */
+.log-entry {
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(57, 255, 20, 0.3);
+    word-break: break-all;
+}
+.log-entry:last-child {
+    animation: blink 0.5s alternate infinite;
+}
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* Bouton de retour */
+.back-return-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 2;
+}
+.back-return-btn:hover {
+    opacity: 1;
+    background-color: #179900;
+}
+
+/* Logo bas droite */
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #39ff14);
+    transition: transform 0.3s, filter 0.3s;
+    animation: pulseGlow 1.5s infinite alternate;
+}
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 20px #179900);
+}
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 10px #39ff14);}
+    100% { filter: drop-shadow(0 0 20px #179900);}
+}
+
+/* Footer */
+footer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Couleurs catégories logs */
+.api-log      { color: #39ff14; }
+.mqtt-log     { color: #aaffaa; }
+.cat-serv     { color: #a4ffb4; }
+.cat-clav     { color: #ffa142; }
+.cat-info     { color: #adffad; }
+.cat-nfc      { color: #42ff98; }
+.cat-api      { color: #42fff5; }
+.log-error    { color: #39ff14; background: #112d10; }
+.log-warning  { color: #ffe066; }
+
+/* Bouton reset logs */
+.btn.reset-btn {
+    background: #179900;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px auto 0 auto;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px rgba(57,255,20,0.5);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.btn.reset-btn:hover, .btn.reset-btn:focus {
+    background: #39ff14;
+    box-shadow: 0 0 15px 3px rgba(57,255,20,0.7);
+    outline: none;
+}
+#reset-logs-btn {
+    margin-left: auto;
+    margin-right: auto;
+}

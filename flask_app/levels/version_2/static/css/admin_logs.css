@@ -1,0 +1,180 @@
+/*
+=================================================================================
+ FICHIER       : admin_logs.css
+ DESCRIPTION   : Feuille de style pour la page d'administration des logs (affichage et reset).
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/admin_logs.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* Corps principal de la page */
+body {
+    margin: 0;                                       /* Pas de marge par défaut */
+    font-family: 'Roboto', sans-serif;                /* Police moderne */
+    background-color: #121212;                        /* Fond sombre */
+    color: #e0e0e0;                                  /* Texte gris clair */
+    height: 100vh;                                   /* Hauteur totale */
+    display: flex;                                   /* Flexbox pour centrage */
+    flex-direction: column;                          /* Colonnes */
+    justify-content: center;                         /* Centre verticalement */
+    align-items: center;                             /* Centre horizontalement */
+    text-align: center;                              /* Centre le texte */
+}
+
+/* Conteneur principal des logs */
+.admin-container {
+    background: rgba(20, 20, 20, 0.95);              /* Fond noir translucide */
+    padding: 30px;                                   /* Espacement interne */
+    border-radius: 8px;                              /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.5);     /* Glow bleu néon */
+    max-width: 900px;                                /* Largeur max */
+    width: 90%;                                      /* Largeur responsive */
+    overflow-x: auto;                                /* Scroll horizontal si besoin */
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2rem;                                 /* Gros titre */
+    color: #00cfff;                                  /* Bleu néon */
+}
+
+/* Zone d'affichage des logs */
+#log-container {
+    height: 400px;                                   /* Hauteur fixe scrollable */
+    overflow-y: auto;                                /* Scroll vertical */
+    border: 2px solid rgba(0, 207, 255, 0.5);        /* Bordure bleu néon */
+    background: rgba(0, 0, 0, 0.3);                  /* Fond semi-transparent */
+    padding: 15px;                                   /* Espacement interne */
+    text-align: left;                                /* Aligne les logs à gauche */
+    font-size: 14px;                                 /* Taille texte logs */
+    width: 100%;
+    max-width: 800px;                                /* Largeur max */
+    margin-top: 20px;                                /* Espace au-dessus */
+}
+
+/* Style de chaque ligne de log */
+.log-entry {
+    font-size: 14px;                                 /* Taille texte */
+    padding: 5px;                                    /* Espacement vertical */
+    border-bottom: 1px solid rgba(0, 207, 255, 0.3); /* Séparateur bleu néon */
+    word-break: break-all;                           /* Coupe les mots trop longs */
+}
+
+/* Dernière log : animation clignotante */
+.log-entry:last-child {
+    animation: blink 0.5s alternate infinite;
+}
+
+/* Animation de clignotement pour la dernière ligne */
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* Bouton de retour (bas gauche) */
+.back-return-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #444;                          /* Fond gris */
+    color: #fff;                                     /* Texte blanc */
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    z-index: 2;                                      /* Devant les logs */
+}
+.back-return-btn:hover {
+    opacity: 1;
+    background-color: #0099cc;                       /* Bleu sombre au survol */
+}
+
+/* Logo fixe bas droite */
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #00cfff);           /* Glow bleu */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: pulseGlow 1.5s infinite alternate;     /* Animation de glow pulsée */
+}
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);              /* Grossit et tourne au survol */
+    filter: drop-shadow(0 0 20px #0099cc);           /* Glow accentué */
+}
+
+/* Animation de glow pulsé pour le logo */
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 10px #00cfff); }
+    100% { filter: drop-shadow(0 0 20px #0099cc); }
+}
+
+/* Pied de page */
+footer {
+    font-size: 0.8rem;                               /* Petite taille */
+    color: #888;                                     /* Gris clair */
+    margin-top: 20px;                                /* Espace au-dessus */
+}
+
+/* Couleurs de catégories de logs */
+.api-log      { color: #00cfff; }                    /* API : bleu vif */
+.mqtt-log     { color: #80e4ff; }                    /* MQTT : bleu clair */
+.cat-serv     { color: #aeefff; }                    /* SERVEUR : bleu pâle */
+.cat-clav     { color: #43bbff; }                    /* Clavier : bleu cyan */
+.cat-info     { color: #b2eaff; }                    /* INFO-CLAVIER : bleu pâle */
+.cat-nfc      { color: #428aff; }                    /* NFC : bleu moyen */
+.cat-api      { color: #42eaff; }                    /* API-challenge : bleu flashy */
+.log-error    { color: #00cfff; background: #0d1a22; } /* Ligne erreur : bleu/fond sombre */
+.log-warning  { color: #ffe066; }                    /* Warning : jaune */
+
+/* Bouton reset logs (centré et en bleu) */
+.btn.reset-btn {
+    background: #097eae;                             /* Bleu foncé */
+    color: #fff;                                     /* Texte blanc */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px auto 0 auto;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px rgba(9, 126, 174, 0.5);  /* Ombre bleue */
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.btn.reset-btn:hover, .btn.reset-btn:focus {
+    background: #00cfff;                             /* Plus clair au survol */
+    box-shadow: 0 0 15px 3px rgba(0, 207, 255, 0.7); /* Glow accentué */
+    outline: none;
+}
+#reset-logs-btn {
+    margin-left: auto;
+    margin-right: auto;
+}

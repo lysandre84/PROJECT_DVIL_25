@@ -1,0 +1,163 @@
+/*
+=================================================================================
+ FICHIER       : login.css
+ DESCRIPTION   : Styles pour la page de connexion (formulaire login, erreurs, logo, responsive).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création du style pour la page de connexion.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/login.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* ===== Style général de la page ===== */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;       /* Police moderne et lisible */
+    background-color: #121212;               /* Fond sombre */
+    color: #e0e0e0;                          /* Texte clair */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===== Conteneur principal du formulaire ===== */
+.login-container {
+    background: rgba(20, 20, 20, 0.95);      /* Fond sombre avec opacité */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(184, 0, 255, 0.5); /* Effet violet électrique néon */
+    max-width: 400px;
+    width: 90%;
+}
+
+/* ===== Titre principal ===== */
+h1 {
+    font-size: 2rem;
+    color: #b800ff;                          /* Violet électrique */
+}
+
+/* ===== Champs de formulaire ===== */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Label pour chaque champ */
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Champ de saisie */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(184, 0, 255, 0.5); /* Bordure violet transparent */
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/* Placeholder personnalisé */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Effet focus sur input */
+input:focus {
+    outline: none;
+    border-color: #b800ff;                    /* Bordure violet électrique au focus */
+    box-shadow: 0 0 10px rgba(184, 0, 255, 0.8); /* Glow violet électrique */
+}
+
+/* ===== Bouton de connexion ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #b800ff;                      /* Violet électrique */
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* Effet au clic sur le bouton */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Effet au survol du bouton */
+button:hover {
+    background: #6600a6;                      /* Violet foncé au hover */
+}
+
+/* ===== Message d'erreur ===== */
+.error-message {
+    background: rgba(184, 0, 255, 0.2);       /* Fond violet transparent */
+    color: #b800ff;                           /* Texte violet électrique */
+    padding: 10px;
+    border: 1px solid #b800ff;                /* Bordure violet électrique */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+/* ===== Logo ===== */
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #b800ff);           /* Glow violet électrique */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 20px #b800ff);           /* Glow violet plus fort */
+}
+
+/* Animation du logo */
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 10px #b800ff); }
+    100% { filter: drop-shadow(0 0 20px #6600a6); }  /* Animation violet foncé */
+}
+
+/* ===== Pied de page ===== */
+footer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+}
+

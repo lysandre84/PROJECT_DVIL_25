@@ -1,0 +1,102 @@
+/*
+=================================================================================
+ FICHIER       : style.css
+ DESCRIPTION   : Styles généraux pour la page (effet hacker/terminal, animations).
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/style.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles :
+ - Mesures mises en place :
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+/* ========== Style général Matrix ========== */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cartes ou blocs principaux */
+.card, .main-block, .container {
+    background: rgba(20, 20, 20, 0.92);
+    border-radius: 12px;
+    box-shadow: 0 0 24px #39ff14, 0 0 8px #00ff33;
+    padding: 34px 26px;
+    margin: 40px 0 0 0;
+    max-width: 480px;
+    width: 94%;
+    text-align: center;
+}
+
+/* Titre */
+h1, h2, h3 {
+    color: #39ff14;
+    margin: 0 0 22px 0;
+    text-shadow: 0 0 12px #39ff14, 0 0 30px #00ff33;
+}
+
+/* Bouton général */
+.btn, button, .main-btn {
+    background: #39ff14;
+    color: #050505;
+    border: none;
+    border-radius: 6px;
+    padding: 13px 30px;
+    font-size: 1.07rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 12px 0 0 0;
+    box-shadow: 0 0 14px #39ff1488;
+    transition: background 0.2s, transform 0.15s;
+}
+.btn:hover, button:hover, .main-btn:hover {
+    background: #179900;
+    transform: scale(1.05);
+}
+
+.logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    opacity: 0.88;
+    filter: drop-shadow(0 0 14px #39ff14);
+    z-index: 2;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 22px #00ff33);
+}
+
+footer {
+    margin-top: 35px;
+    color: #baffc9;
+    font-size: 0.98rem;
+    text-shadow: 0 0 4px #39ff14;
+    text-align: center;
+    letter-spacing: 1px;
+}

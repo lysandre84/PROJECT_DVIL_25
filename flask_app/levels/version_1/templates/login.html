@@ -1,0 +1,63 @@
+<!--
+=================================================================================
+ FICHIER       : login.html
+ DESCRIPTION   : Page de connexion utilisateur (login form).
+ AUTEUR        : Lysandre / Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+ USAGE :
+ - À placer dans le dossier templates/ d'un projet Flask.
+ - Permet la connexion utilisateur.
+ CONTACT :
+ - Email : lysandrepro@gmail.com
+ - GitHub : https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+=================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées et titre -->
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Police Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Feuille de style dédiée à la page login -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <!-- Conteneur principal pour le formulaire de connexion -->
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <!-- Message d'erreur éventuel (rempli dynamiquement en JS) -->
+        <div id="error-message" class="error-message" style="display: none;"></div>
+        <!-- Formulaire de login -->
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required placeholder="Entrez votre nom d'utilisateur">
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required placeholder="Mot de passe">
+            </div>
+            <!-- Bouton de connexion -->
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+    <!-- Logo affiché en bas à droite -->
+    <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 - Connexion</p>
+    </footer>
+    <!-- Script JS pour la gestion du login -->
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

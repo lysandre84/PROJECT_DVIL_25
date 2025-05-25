@@ -1,0 +1,291 @@
+/*
+=================================================================================
+ FICHIER       : admin_users.css
+ DESCRIPTION   : Feuille de style pour la gestion des utilisateurs en mode admin.
+ AUTEUR        : Lysandre /  Lysius
+ DATE          : 14/02/25
+ VERSION       : 1.1.1
+ LICENCE       : Autre
+=================================================================================
+
+ HISTORIQUE :
+ - 14/02/25 : [Lysius] Création de la page.
+
+ USAGE :
+ - À inclure dans un fichier HTML avec : <link rel="stylesheet" href="/static/admin_users.css">
+ - Compatible avec : Chrome, Firefox, Safari, Edge
+ - Technologies utilisées : CSS3
+
+ SECURITÉ :
+ - Points sensibles : N/A
+ - Mesures mises en place : N/A
+
+ CONTACT :
+ - Email :    lysandrepro@gmail.com
+ - GitHub :   https://github.com/lysandre84
+ - Framagit : https://framagit.org/vialette
+
+=================================================================================
+*/
+
+
+/* ===============================
+   Admin Users - Matrix Green Theme
+   =============================== */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Press Start 2P', monospace, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteneur principal du tableau users */
+.admin-container {
+    background: rgba(10, 30, 10, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 0 24px #39ff14, 0 0 3px #39ff1490;
+    padding: 38px 28px 24px 28px;
+    max-width: 650px;
+    width: 98vw;
+    margin: 0 auto 24px auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titre de la page */
+.admin-container h1, h2 {
+    font-size: 1.7rem;
+    margin: 0 0 20px 0;
+    color: #39ff14;
+    text-shadow: 0 0 12px #39ff14, 0 0 30px #39ff1490;
+    letter-spacing: 1px;
+}
+
+/* Conteneur de la table AVEC SCROLL Y */
+.users-table-container {
+    width: 100%;
+    max-height: 370px;     /* Hauteur visible du tableau */
+    overflow-y: auto;      /* Scroll vertical seulement */
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+/* Barre de scroll Matrix verte */
+.users-table-container::-webkit-scrollbar {
+    width: 8px;
+}
+.users-table-container::-webkit-scrollbar-thumb {
+    background: #39ff14bb;
+    border-radius: 10px;
+}
+.users-table-container::-webkit-scrollbar-track {
+    background: #161c16;
+    border-radius: 10px;
+}
+
+/* Tableau des users */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(10, 30, 10, 0.94);
+    box-shadow: 0 0 16px #39ff1444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Tête du tableau */
+th {
+    background-color: rgba(57,255,20,0.16);
+    color: #39ff14;
+    font-size: 1.07em;
+    padding: 12px 8px;
+    border-bottom: 2px solid #39ff14;
+    text-align: center;
+}
+
+/* Cellules du tableau */
+td {
+    color: #fff;
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid rgba(57,255,20,0.12);
+}
+
+/* Lignes alternées */
+tbody tr:nth-child(even) {
+    background-color: rgba(57,255,20,0.03);
+}
+
+/* Groupe d’actions */
+.action-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bouton Ajouter */
+.btn-add {
+    background: linear-gradient(90deg,#39ff14 60%,#aaffaa 100%);
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    padding: 9px 16px;
+    font-size: 1.05em;
+    margin-bottom: 16px;
+    box-shadow: 0 0 10px #39ff14;
+    cursor: pointer;
+    transition: background 0.19s, transform 0.13s;
+}
+.btn-add:hover {
+    background: linear-gradient(90deg,#20a900 50%,#39ff14 100%);
+    transform: scale(1.06);
+}
+
+/* Bouton Modifier */
+.btn-edit {
+    background: #ffa142;
+    color: #222;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 13px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 6px #ffa14270;
+    transition: background 0.18s, transform 0.12s;
+}
+.btn-edit:hover {
+    background: #e65100;
+    color: #fff;
+    transform: scale(1.04);
+}
+
+/* Bouton Supprimer */
+.btn-delete {
+    background: #39ff14;
+    color: #121212;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 13px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #39ff1490;
+    transition: background 0.18s, transform 0.12s;
+}
+.btn-delete:hover {
+    background: #179900;
+    color: #fff;
+    transform: scale(1.04);
+}
+
+/* Modal d’édition/ajout user (optionnel, si utilisé) */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.55);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #181c1a;
+    padding: 28px 24px 16px 24px;
+    border-radius: 13px;
+    width: 330px;
+    color: #fff;
+    box-shadow: 0 0 18px #39ff14cc;
+}
+.modal-content input, .modal-content select {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #39ff14;
+    background: #232f22;
+    color: #fff;
+}
+
+/* Logo animé en bas à droite */
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #39ff14);
+    transition: transform 0.2s, filter 0.3s;
+    z-index: 2;
+    animation: pulseGlow 1.5s infinite alternate;
+}
+.logo:hover {
+    transform: scale(1.09) rotate(2deg);
+    filter: drop-shadow(0 0 22px #39ff14) drop-shadow(0 0 8px #aaffaa);
+}
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 10px #39ff14);}
+    100% { filter: drop-shadow(0 0 22px #39ff14);}
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #39ff14cc;
+    font-size: 0.97rem;
+    margin-top: 18px;
+    padding: 10px 0 8px 0;
+    text-shadow: 0 0 6px #39ff14;
+}
+
+/* Bouton retour Matrix, fixe en bas à gauche */
+.back-return-btn {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    background: #222;
+    color: #39ff14;
+    font-weight: 600;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #39ff14aa;
+    opacity: 0.8;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.3s, background 0.2s, color 0.2s;
+    text-decoration: none;
+    outline: none;
+}
+.back-return-btn:hover, .back-return-btn:focus {
+    background: #39ff14;
+    color: #222;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .admin-container {
+        max-width: 98vw;
+        padding: 10px 2px;
+    }
+    th, td {
+        font-size: 0.92em;
+        padding: 6px 4px;
+    }
+    .modal-content {
+        width: 95vw;
+        min-width: 0;
+    }
+}
