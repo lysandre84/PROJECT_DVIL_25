@@ -6,3 +6,7 @@
 2025-05-25 20:58:30,464 [SERVEUR] [MQTT] Serrure => locked=False
 2025-05-25 20:58:33,985 [SERVEUR] [MQTT] Serrure => locked=False
 2025-05-25 20:58:33,988 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-26 00:59:00,037 [SERVEUR] [MQTT] Connecté au broker
+2025-05-26 00:59:00,132 [SERVEUR] Status consulté (verrouillée)
+2025-05-26 01:14:31,656 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-26 01:14:56,675 [SERVEUR] Status consulté (déverrouillée)
