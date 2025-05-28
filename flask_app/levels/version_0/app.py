@@ -492,6 +492,29 @@ def admin_users():
     users = User.query.all()
     return render_template("admin_users.html", users=users)
 
+@app.route("/admin/logs/filter")
+@require_auth
+@require_admin
+def filter_logs():
+    log_type = request.args.get("type")
+    log_files = {
+        "SERVEUR":      os.path.join(LOGS_DIR, "serveur.log"),
+        "Clavier-I²C":  os.path.join(LOGS_DIR, "clavier.log"),
+        "INFO-CLAVIER": os.path.join(LOGS_DIR, "keypad_raw.log"),
+        "NFC":          os.path.join(LOGS_DIR, "nfc.log"),
+        "API":          os.path.join(LOGS_DIR, "api.log"),
+        "API-challenge":os.path.join(LOGS_DIR, "challenge.log"),
+    }
+    path = log_files.get(log_type)
+    if not path or not os.path.exists(path):
+        return {"lines": [], "error": f"Erreur lecture log : [Errno 2] No such file or directory: '{path}'"}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            lines = f.readlines()[-200:]
+        return {"lines": [l.strip() for l in lines]}
+    except Exception as e:
+        return {"lines": [], "error": f"Erreur lecture log : {e}"}
+
 @app.route("/admin/logs")
 @require_auth
 @require_admin

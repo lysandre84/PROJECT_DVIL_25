@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# -------------------------------------------------------------------------------------
+# ===============================================================================
+#    
+#   $$$$$$$\  $$\    $$\ $$$$$$\ $$\             $$\    $$\  $$$$$$\  
+#   $$  __$$\ $$ |   $$ |\_$$  _|$$ |            $$ |   $$ |$$ ___$$\ 
+#   $$ |  $$ |$$ |   $$ |  $$ |  $$ |            $$ |   $$ |\_/   $$ |
+#   $$ |  $$ |\$$\  $$  |  $$ |  $$ |            \$$\  $$  |  $$$$$ / 
+#   $$ |  $$ | \$$\$$  /   $$ |  $$ |             \$$\$$  /   \___$$\ 
+#   $$ |  $$ |  \$$$  /    $$ |  $$ |              \$$$  /  $$\   $$ |
+#   $$$$$$$  |   \$  /   $$$$$$\ $$$$$$$$\          \$  /   \$$$$$$  |
+#   \_______/     \_/    \______|\________|          \_/     \______/ 
 #
-#    /$$$$$$$  /$$    /$$ /$$$$$$ /$$             /$$    /$$  /$$$$$$
-#   | $$__  $$| $$   | $$|_  $$_/| $$            | $$   | $$ /$$$_  $$
-#   | $$  \ $$| $$   | $$  | $$  | $$            | $$   | $$| $$$$\ $$
-#   | $$  | $$|  $$ / $$/  | $$  | $$            |  $$ / $$/| $$ $$ $$
-#   | $$  | $$ \  $$ $$/   | $$  | $$             \  $$ $$/ | $$\ $$$$
-#   | $$  | $$  \  $$$/    | $$  | $$              \  $$$/  | $$ \ $$$
-#   | $$$$$$$/   \  $/    /$$$$$$| $$$$$$$$         \  $/   |  $$$$$$/
-#   |_______/     \_/    |______/|________/          \_/     \______/
-#
-# ----------------------------------------------------------------------------------
+# ================================================================================
 __version__ = "1.0.0"  # DVIL Secure // Version sécurisée (Trois vulnérabilitées).
 # Auteur   : Lysius [VIALETTE Lysandre]
 # Date     : 15/03/2025
@@ -497,8 +497,7 @@ def admin_users():
 @require_admin
 def admin_ulogs():
     # Affiche les logs principaux dans le panneau d'admin
-    import os
-
+    
     LOGS_DIR = os.path.join(os.path.dirname(__file__), "logs")
     os.makedirs(LOGS_DIR, exist_ok=True)
 
@@ -528,7 +527,7 @@ def admin_ulogs():
 @require_admin
 def admin_log_raw():
     # Renvoie les logs bruts sous forme de liste pour affichage dynamique
-    import os
+    
     LOGS_DIR = os.path.join(os.path.dirname(__file__), "logs")
     log_files = [
         ("SERVEUR",     os.path.join(LOGS_DIR, "serveur.log")),
@@ -549,6 +548,30 @@ def admin_log_raw():
         except Exception as e:
             logs.append([cat, f"[ERROR] Erreur lecture log: {e}"])
     return {"logs": logs}
+
+@app.route("/admin/logs/filter")
+@require_auth
+@require_admin
+def filter_logs():
+    log_type = request.args.get("type")
+    log_files = {
+        "SERVEUR":      os.path.join(LOGS_DIR, "serveur.log"),
+        "Clavier-I²C":  os.path.join(LOGS_DIR, "clavier.log"),
+        "INFO-CLAVIER": os.path.join(LOGS_DIR, "keypad_raw.log"),
+        "NFC":          os.path.join(LOGS_DIR, "nfc.log"),
+        "API":          os.path.join(LOGS_DIR, "api.log"),
+        "API-challenge":os.path.join(LOGS_DIR, "challenge.log"),
+    }
+    path = log_files.get(log_type)
+    if not path or not os.path.exists(path):
+        return {"lines": [], "error": f"Erreur lecture log : [Errno 2] No such file or directory: '{path}'"}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            lines = f.readlines()[-200:]
+        return {"lines": [l.strip() for l in lines]}
+    except Exception as e:
+        return {"lines": [], "error": f"Erreur lecture log : {e}"}
+
 
 @app.route("/admin/reset_logs", methods=["POST"])
 @require_auth

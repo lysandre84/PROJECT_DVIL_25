@@ -28,136 +28,146 @@
 =================================================================================
 */
 
-/* Corps principal de la page */
 body {
-    margin: 0;                                       /* Pas de marge par défaut */
-    font-family: 'Roboto', sans-serif;                /* Police moderne */
-    background-color: #121212;                        /* Fond sombre */
-    color: #e0e0e0;                                  /* Texte gris clair */
-    height: 100vh;                                   /* Hauteur totale */
-    display: flex;                                   /* Flexbox pour centrage */
-    flex-direction: column;                          /* Colonnes */
-    justify-content: center;                         /* Centre verticalement */
-    align-items: center;                             /* Centre horizontalement */
-    text-align: center;                              /* Centre le texte */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1430;   /* Violet nuit profond */
+    color: #c600ff; /* Violet électrique pour l’ambiance globale */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Conteneur principal des logs */
 .admin-container {
-    background: rgba(20, 20, 20, 0.95);              /* Fond noir translucide */
-    padding: 30px;                                   /* Espacement interne */
-    border-radius: 8px;                              /* Coins arrondis */
-    box-shadow: 0 0 15px rgba(184, 0, 255, 0.5);     /* Glow violet électrique néon */
-    max-width: 900px;                                /* Largeur max */
-    width: 90%;                                      /* Largeur responsive */
-    overflow-x: auto;                                /* Scroll horizontal si besoin */
+    background: rgba(28, 15, 48, 0.97);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #c600ff88, 0 0 10px 2px #a400ff77;
+    max-width: 900px;
+    width: 90%;
+    overflow-x: auto;
+    margin: 40px auto;
+    border: 2px solid #c600ff;
 }
 
-/* Titre principal */
 h1 {
-    font-size: 2rem;                                 /* Gros titre */
-    color: #b800ff;                                  /* Violet électrique néon */
+    font-size: 2rem;
+    color: #c600ff;
+    text-shadow: 0 0 16px #c600ffcc, 0 0 28px #f0f;
+    margin-bottom: 18px;
 }
 
-/* Zone d'affichage des logs */
-#log-container {
-    height: 400px;                                   /* Hauteur fixe scrollable */
-    overflow-y: auto;                                /* Scroll vertical */
-    border: 2px solid rgba(184, 0, 255, 0.5);        /* Bordure violet électrique néon */
-    background: rgba(0, 0, 0, 0.3);                  /* Fond semi-transparent */
-    padding: 15px;                                   /* Espacement interne */
-    text-align: left;                                /* Aligne les logs à gauche */
-    font-size: 14px;                                 /* Taille texte logs */
-    width: 100%;
-    max-width: 800px;                                /* Largeur max */
-    margin-top: 20px;                                /* Espace au-dessus */
-}
-
-/* Style de chaque ligne de log */
-.log-entry {
-    font-size: 14px;                                 /* Taille texte */
-    padding: 5px;                                    /* Espacement vertical */
-    border-bottom: 1px solid rgba(184, 0, 255, 0.3); /* Séparateur violet électrique */
-    word-break: break-all;                           /* Coupe les mots trop longs */
-}
-
-/* Dernière log : animation clignotante */
-.log-entry:last-child {
-    animation: blink 0.5s alternate infinite;
-}
-
-/* Animation de clignotement pour la dernière ligne */
-@keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0.6; }
-}
-
-/* Bouton de retour (bas gauche) */
-.back-return-btn {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    background-color: #444;                          /* Fond gris */
-    color: #fff;                                     /* Texte blanc */
-    padding: 10px 12px;
-    border-radius: 4px;
-    text-decoration: none;
+/* Selecteur */
+#log-type-select {
+    background: #191126;
+    color: #c600ff;
+    border-radius: 7px;
+    border: 1px solid #c600ff99;
+    padding: 4px 10px;
     font-size: 1rem;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-    z-index: 2;                                      /* Devant les logs */
+    margin-left: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 0 8px #c600ff33;
 }
-.back-return-btn:hover {
-    opacity: 1;
-    background-color: #6600a6;                       /* Violet sombre au survol */
-}
-
-/* Logo fixe bas droite */
-.logo {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 60px;
-    height: auto;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px #b800ff);           /* Glow violet électrique */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    animation: pulseGlow 1.5s infinite alternate;     /* Animation de glow pulsée */
-}
-.logo:hover {
-    opacity: 1;
-    transform: scale(1.1) rotate(2deg);              /* Grossit et tourne au survol */
-    filter: drop-shadow(0 0 20px #6600a6);           /* Glow accentué violet */
+label[for="log-type-select"] {
+    font-weight: bold;
+    color: #c600ff;
 }
 
-/* Animation de glow pulsé pour le logo */
-@keyframes pulseGlow {
-    0% { filter: drop-shadow(0 0 10px #b800ff); }
-    100% { filter: drop-shadow(0 0 20px #6600a6); }
+#log-legend {
+    margin: 6px 0 16px 0;
+    font-size: 1.06em;
+}
+#log-legend span {
+    font-weight: bold;
+    margin: 0 2px;
+    padding: 2px 8px;
+    border-radius: 7px;
+    background: #221032;
+    color: #fff;
+    box-shadow: 0 0 8px #c600ff44;
 }
 
-/* Pied de page */
-footer {
-    font-size: 0.8rem;                               /* Petite taille */
-    color: #888;                                     /* Gris clair */
-    margin-top: 20px;                                /* Espace au-dessus */
+/* Zone logs */
+#logs-container, .logs-box {
+    height: 400px;
+    overflow-y: auto;
+    background: #170e23;
+    border-radius: 10px;
+    border: 2px solid #c600ff;
+    color: #f1d3ff;
+    padding: 15px;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-size: 0.98rem;
+    text-align: left;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    box-shadow: 0 0 18px #c600ff55;
 }
 
-/* Couleurs de catégories de logs */
-.api-log      { color: #b800ff; }                    /* API : violet électrique vif */
-.mqtt-log     { color: #e0baff; }                    /* MQTT : violet pâle */
-.cat-serv     { color: #d3a4ff; }                    /* SERVEUR : violet clair */
-.cat-clav     { color: #ffa142; }                    /* Clavier : orange */
-.cat-info     { color: #dabaff; }                    /* INFO-CLAVIER : violet très pâle */
-.cat-nfc      { color: #d142ff; }                    /* NFC : violet fuchsia */
-.cat-api      { color: #a142ff; }                    /* API-challenge : violet cyan */
-.log-error    { color: #b800ff; background: #25103a; } /* Ligne erreur : violet/fond sombre */
-.log-warning  { color: #ffe066; }                    /* Warning : jaune */
+.log-entry {
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid #c600ff44;
+    word-break: break-all;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    transition: background 0.18s;
+    white-space: pre-wrap;
+}
+.log-entry:first-child {
+    background: rgba(198,0,255,0.10);
+    font-weight: bold;
+    animation: blink 1s alternate infinite;
+}
+@keyframes blink {
+    0%   { background: rgba(198,0,255,0.08);}
+    100% { background: rgba(198,0,255,0.17);}
+}
+.log-repeat {
+    color: #e055ff;
+    font-size: 0.9em;
+    margin-left: 8px;
+    font-weight: bold;
+    background: rgba(90,0,90,0.13);
+    padding: 2px 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #c600ff22;
+}
 
-/* Bouton reset logs (centré et violet) */
-.btn.reset-btn {
-    background: #6600a6;                             /* Violet foncé */
-    color: #fff;                                     /* Texte blanc */
+/* COULEURS PUNCHY PAR CATÉGORIE */
+.api-log      { color: #24f0ff; font-weight: bold; text-shadow: 0 0 15px #24f0ffcc, 0 0 7px #52b6ff88;}    /* API = cyan flashy */
+.cat-serv     { color: #e84cff; font-weight: bold; text-shadow: 0 0 14px #ff00ccaa, 0 0 7px #eb74ff88;}   /* SERVEUR = rose-violet */
+.cat-clav     { color: #ffe44c; font-weight: bold; text-shadow: 0 0 13px #faff0088;}                      /* CLAVIER = jaune flash */
+.cat-info     { color: #54fff7; font-weight: bold; text-shadow: 0 0 12px #31e7ff77;}                      /* INFO-CLAVIER = bleu pastel */
+.cat-nfc      { color: #a055ff; font-weight: bold; text-shadow: 0 0 13px #a055ff88;}                      /* NFC = violet pur */
+/*.cat-api      { color: #ff7efb; font-weight: bold; text-shadow: 0 0 16px #e600ff88, 0 0 8px #e272ffcc;}   API-challenge = magenta/rose néon */
+
+/*Paramétre couleurs du select*/
+#log-type-select option[value="API"]           { color: #24f0ff; }
+#log-type-select option[value="SERVEUR"]       { color: #e84cff; }
+#log-type-select option[value="Clavier-I²C"]   { color: #ffe44c; }
+#log-type-select option[value="INFO-CLAVIER"]  { color: #54fff7; }
+#log-type-select option[value="NFC"]           { color: #a055ff; }
+/*#log-type-select option[value="API-challenge"] { color: #ff7efb; }*/
+
+/* Légende en couleurs aussi */
+#log-legend .api-log      { color: #24f0ff; }
+#log-legend .cat-serv     { color: #e84cff; }
+#log-legend .cat-clav     { color: #ffe44c; }
+#log-legend .cat-info     { color: #54fff7; }
+#log-legend .cat-nfc      { color: #a055ff; }
+/*#log-legend .cat-api      { color: #ff7efb; }*/
+
+/* Bouton reset logs */
+.btn.reset-btn, #reset-logs-btn {
+    background: linear-gradient(90deg, #c600ff 25%, #ff7efb 100%);
+    color: #fff;
     border: none;
     border-radius: 8px;
     padding: 10px 24px;
@@ -166,15 +176,61 @@ footer {
     margin: 10px auto 0 auto;
     display: block;
     cursor: pointer;
-    box-shadow: 0 0 10px 2px rgba(184,0,255,0.5);     /* Ombre violet */
+    box-shadow: 0 0 12px 2px #c600ff77;
     transition: background 0.2s, box-shadow 0.2s;
 }
-.btn.reset-btn:hover, .btn.reset-btn:focus {
-    background: #b800ff;                             /* Violet néon au survol */
-    box-shadow: 0 0 15px 3px rgba(184,0,255,0.7);    /* Glow accentué */
+.btn.reset-btn:hover, #reset-logs-btn:hover, #reset-logs-btn:focus {
+    background: #c600ff;
+    box-shadow: 0 0 18px 3px #ff7efbcc;
     outline: none;
 }
-#reset-logs-btn {
-    margin-left: auto;
-    margin-right: auto;
+
+.back-return-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #44184d;
+    color: #ff7efb;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.86;
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 2;
+    box-shadow: 0 0 10px #c600ff33;
+    border: 1px solid #c600ff66;
+}
+.back-return-btn:hover {
+    opacity: 1;
+    background-color: #230326;
+    color: #ff7efb;
+    border-color: #ff7efb;
+}
+
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.93;
+    filter: drop-shadow(0 0 20px #c600ff);
+    transition: transform 0.3s, filter 0.3s;
+    animation: pulseGlow 1.5s infinite alternate;
+}
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 34px #ff7efb);
+}
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 14px #c600ff);}
+    100% { filter: drop-shadow(0 0 34px #ff7efb);}
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #e272ff;
+    margin-top: 20px;
 }

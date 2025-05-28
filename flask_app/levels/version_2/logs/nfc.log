@@ -1,2 +1,6 @@
-2025-05-25 20:58:33,975 [NFC] 73:DE:3E:14
-2025-05-25 20:58:33,976 [NFC] Déverrouillage badge par alice (id=6, nfc_code=73:DE:3E:14)
+2025-05-28 07:12:19,388 [NFC] 73:DE:3E:14
+2025-05-28 07:12:19,389 [NFC] Echec badge inconnu : 73:DE:3E:14
+2025-05-28 07:12:20,935 [NFC] 73:DE:3E:14
+2025-05-28 07:12:20,936 [NFC] Echec badge inconnu : 73:DE:3E:14
+2025-05-28 07:12:26,683 [NFC] 96:12:29:02
+2025-05-28 07:12:26,684 [NFC] Déverrouillage badge par alice (id=6, nfc_code=96:12:29:02)

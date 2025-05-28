@@ -1,5 +1,39 @@
-2025-05-25 21:04:21,277 [SERVEUR] Status consulté (déverrouillée)
-2025-05-26 00:46:06,958 [SERVEUR] [MQTT] Connecté au broker
-2025-05-26 00:46:25,319 [SERVEUR] Status consulté (verrouillée)
-2025-05-26 00:48:14,575 [SERVEUR] [MQTT] Serrure => locked=False
-2025-05-26 00:48:14,819 [SERVEUR] Status consulté (déverrouillée)
+2025-05-28 00:05:33,919 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:07:23,664 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:08:17,966 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:11:35,990 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:18:42,809 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:26:07,399 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:28:06,073 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:32:28,820 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:34:45,082 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:35:49,342 [SERVEUR] Déverrouillage par API
+2025-05-28 00:35:49,348 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-28 00:36:39,386 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1313
+2025-05-28 00:39:37,032 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:39:43,582 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1314
+2025-05-28 00:40:33,627 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1314
+2025-05-28 00:45:35,396 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:46:07,045 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1315
+2025-05-28 00:52:28,548 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:52:30,998 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1315
+2025-05-28 00:57:00,489 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 00:57:05,425 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1315
+2025-05-28 00:57:26,355 [SERVEUR] [ADMIN] Modification pin_code pour user_id=13 : 3737
+2025-05-28 00:57:36,242 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1789
+2025-05-28 00:57:46,803 [SERVEUR] [ADMIN] Modification pin_code pour user_id=13 : 3725
+2025-05-28 00:58:40,758 [SERVEUR] [ADMIN] Modification pin_code pour user_id=13 : 3725
+2025-05-28 00:58:43,297 [SERVEUR] [ADMIN] Modification pin_code pour user_id=14 : 1128
+2025-05-28 00:58:52,631 [SERVEUR] [ADMIN] Modification pin_code pour user_id=14 : 1129
+2025-05-28 00:59:04,037 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-28 00:59:04,053 [SERVEUR] [MQTT] Serrure => locked=False
+2025-05-28 01:03:39,494 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 01:04:48,233 [SERVEUR] [ADMIN] Modification pin_code pour user_id=13 : 3725
+2025-05-28 01:04:52,020 [SERVEUR] [ADMIN] Modification pin_code pour user_id=13 : 3727
+2025-05-28 01:04:54,571 [SERVEUR] [ADMIN] Modification pin_code pour user_id=6 : 1788
+2025-05-28 01:55:25,366 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 02:00:47,755 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 08:23:24,555 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 08:24:14,845 [SERVEUR] Status consulté (verrouillée)
+2025-05-28 08:27:06,899 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 08:31:53,897 [SERVEUR] [MQTT] Connecté au broker
