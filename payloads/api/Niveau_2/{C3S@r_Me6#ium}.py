@@ -3,7 +3,7 @@
 
 import requests
 
-BASE_URL = "http://192.168.4.24:5000"
+BASE_URL = "http://192.168.1.79:5000"
 
 def main():
     session = requests.Session()

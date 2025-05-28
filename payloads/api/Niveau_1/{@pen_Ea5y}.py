@@ -37,7 +37,7 @@
 
 import requests
 
-def exploit_unlock_public(base_url="http://192.168.4.24:5000"):
+def exploit_unlock_public(base_url="http://192.168.1.79:5000"):
     """
     Exploite la faille niveau 1 : /v1/unlock_public
     Aucun contrôle d’accès => n’importe qui peut déverrouiller la serrure

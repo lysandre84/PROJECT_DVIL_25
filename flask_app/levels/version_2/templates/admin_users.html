@@ -32,19 +32,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Gestion des Utilisateurs</title>
-  <!-- Police moderne Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- CSS spécifique -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_users.css') }}">
 </head>
 <body>
+
 <div class="admin-container">
-    <h1>Gestion des Utilisateurs</h1>
+    <h1> Gestion des Utilisateurs</h1>
 
     <!-- Bouton pour ajouter un user -->
     <button id="btn-add-user" class="btn-add">➕ Ajouter un utilisateur</button>
 
-    <!-- Conteneur table scrollable -->
+    <!-- SCROLL VERTICAL UNIQUEMENT SUR LA TABLE -->
     <div class="users-table-container">
       <table>
         <thead>
@@ -72,15 +71,10 @@
                     data-user-id="{{ user.id }}" data-field="tag">{{ user.tag or "" }}</td>
                 <td>
                   <div class="action-btns">
-                    <button class="btn-edit"
-                            data-id="{{ user.id }}"
-                            data-username="{{ user.username }}"
-                            data-role="{{ user.role }}">
+                    <button class="btn-edit" data-id="{{ user.id }}" data-username="{{ user.username }}" data-role="{{ user.role }}">
                       ✏️ Modifier
                     </button>
-                    <button class="btn-delete"
-                            data-id="{{ user.id }}"
-                            data-username="{{ user.username }}">
+                    <button class="btn-delete" data-id="{{ user.id }}" data-username="{{ user.username }}">
                       ❌ Supprimer
                     </button>
                   </div>
@@ -95,7 +89,7 @@
 <!-- Bouton/lien de retour en bas à gauche -->
 <a href="/admin" class="back-return-btn">⬅️ Retour</a>
 
-<!-- Modale ajout utilisateur -->
+<!-- Pop-up / modale pour ajouter un user -->
 <div id="modal-add" class="modal" style="display: none;">
   <div class="modal-content">
     <h2>Ajouter un utilisateur</h2>
@@ -113,7 +107,7 @@
   </div>
 </div>
 
-<!-- Modale modification utilisateur -->
+<!-- Pop-up / modale pour modifier user -->
 <div id="modal-edit" class="modal" style="display: none;">
   <div class="modal-content">
     <h2>Modifier l'utilisateur</h2>
@@ -132,14 +126,14 @@
   </div>
 </div>
 
-<!-- Logo bas droite -->
+<!-- Logo -->
 <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
 
 <footer>
     <p>© 2025 - Admin Panel</p>
 </footer>
 
-<!-- JS principal -->
+<!-- Ton script JS -->
 <script src="{{ url_for('static', filename='js/admin_users.js') }}"></script>
 </body>
 </html>
