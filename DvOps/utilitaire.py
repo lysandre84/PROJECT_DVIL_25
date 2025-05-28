@@ -1,115 +1,117 @@
 #!/usr/bin/env python3
+
 import subprocess
 import sys
 import os
 
-EXCLUDED_PATTERNS = ['myenv', 'venv', '__pycache__', '.egg-info', '.DS_Store']
-
-def run(cmd):
-    """Run a shell command and print output live."""
+def run(cmd, check=True):
+    """Run a shell command and print output live. Return completed process."""
     print(f"\n[CMD] {cmd}")
     result = subprocess.run(cmd, shell=True, text=True)
-    if result.returncode != 0:
+    if check and result.returncode != 0:
         print(f"\033[91m[Erreur] La commande a échoué : {cmd}\033[0m")
         sys.exit(result.returncode)
+    return result
 
-def ask_git_identity():
-    # Vérifie que git user.name et user.email sont bien configurés
-    try:
-        name = subprocess.check_output("git config user.name", shell=True, text=True).strip()
-        email = subprocess.check_output("git config user.email", shell=True, text=True).strip()
-        if name and email:
-            return
-    except subprocess.CalledProcessError:
-        pass
-    print("\n\033[93m⚠️ Git user.name et user.email ne sont pas configurés. On va les définir.\033[0m")
-    name = input("Nom à utiliser pour Git (user.name) : ").strip()
-    email = input("Email à utiliser pour Git (user.email) : ").strip()
-    if name:
-        run(f'git config --local user.name "{name}"')
-    if email:
-        run(f'git config --local user.email "{email}"')
-
-def git_status_short():
-    # Retourne [(status, path)]
-    lines = subprocess.check_output("git status --short", shell=True, text=True).splitlines()
-    res = []
-    for line in lines:
-        status, path = line[:2].strip(), line[2:].strip()
-        # Filtrage basique pour ne pas afficher les dossiers virtuels
-        if not any(x in path for x in EXCLUDED_PATTERNS):
-            res.append((status, path))
-    return res
-
-def affiche_et_choisis_fichiers():
-    files = git_status_short()
-    if not files:
-        print("\nAucun fichier modifié ou non suivi à ajouter.")
-        return []
-
-    print("\nFichiers modifiés / non suivis à ajouter :")
-    for i, (statut, chemin) in enumerate(files, 1):
-        print(f"  {i:2d}. [{statut}] {chemin}")
-
-    print("\nTout ajouter ? (o/N) ou liste les fichiers séparés par espace ou numéros pour n’en ajouter qu’une partie")
-    choix = input("> ").strip()
-    if choix.lower() == 'o':
-        selection = [chemin for _, chemin in files]
-    elif choix == "":
-        print("Aucune sélection. Arrêt.")
-        sys.exit(0)
-    else:
-        indices = [s for s in choix.split() if s.isdigit()]
-        chemins = [s for s in choix.split() if not s.isdigit()]
-        selection = []
-        if indices:
-            selection += [files[int(idx)-1][1] for idx in indices if 0 < int(idx) <= len(files)]
-        selection += chemins
-
-    # Vérifier existence et filtrer
-    selection = [chemin for chemin in selection if os.path.exists(chemin)]
-    if not selection:
-        print("\033[91mAucun fichier valide sélectionné. Arrêt.\033[0m")
-        sys.exit(1)
-    print("\nFichiers qui vont être ajoutés :")
-    print(" ".join(f'"{f}"' for f in selection))
-    confirm = input("Confirmer l’ajout ? (O/n) : ").strip().lower()
-    if confirm not in ("", "o", "O"):
-        print("Ajout annulé.")
-        sys.exit(0)
-    return selection
+def get_git_paths():
+    """Retourne la liste des fichiers modifiés ou non suivis, adaptés au cwd."""
+    result = subprocess.run(
+        "git status --porcelain",
+        shell=True, capture_output=True, text=True
+    )
+    all_paths = []
+    cwd = os.getcwd()
+    git_root = subprocess.run(
+        "git rev-parse --show-toplevel",
+        shell=True, capture_output=True, text=True
+    ).stdout.strip()
+    rel_cwd = os.path.relpath(cwd, git_root)
+    for line in result.stdout.splitlines():
+        code = line[:2]
+        path = line[3:].strip().strip('"').replace("\\", "/")
+        # Si on n'est pas à la racine du dépôt, adapte le chemin proposé
+        if rel_cwd != "." and path.startswith(rel_cwd + "/"):
+            path = path[len(rel_cwd)+1:]
+        if path:
+            all_paths.append(path)
+    return all_paths
 
 def main():
     print("=== 🚀 PUSHEUR GIT Framagit & GitHub ===")
     print("État du dépôt actuel :")
     run("git status")
-    ask_git_identity()
-    selection = affiche_et_choisis_fichiers()
-    run("git add " + " ".join(f'"{f}"' for f in selection))
+
+    # Afficher les fichiers modifiés / non suivis
+    print("\nFichiers modifiés / non suivis à ajouter :")
+    all_paths = get_git_paths()
+    if not all_paths:
+        print("\nAucun fichier modifié ou non suivi à ajouter.\n")
+        run("git add")  # Affiche l'aide git add
+        print("\nVérification : voici les fichiers prêts à être commités :")
+        run("git status")
+        msg = input("\nMessage de commit (laisse vide pour 'MAJ auto admin') :\n> ").strip() or "MAJ auto admin"
+        run(f'git commit -m "{msg}"')
+        sys.exit(0)
+
+    for i, path in enumerate(all_paths, 1):
+        print(f"  {i}. {path}")
+
+    print("\nTout ajouter ? (o/N) ou liste les fichiers séparés par espace ou numéros pour n’en ajouter qu’une partie")
+    choix = input("> ").strip()
+    to_add = []
+    if choix.lower() == "o":
+        to_add = all_paths
+    elif choix.strip() == "":
+        print("Aucun fichier/dossier indiqué. Arrêt.")
+        return
+    else:
+        # Accepte soit les chemins, soit les numéros séparés par espace
+        parts = choix.split()
+        for part in parts:
+            if part.isdigit():
+                idx = int(part) - 1
+                if 0 <= idx < len(all_paths):
+                    to_add.append(all_paths[idx])
+            else:
+                to_add.append(part)
+
+    print("\nFichiers qui vont être ajoutés :")
+    print(" ".join(f'"{x}"' for x in to_add))
+    confirm = input("\nConfirmer l’ajout ? (O/n) : ").strip().lower()
+    if confirm not in ("o", ""):
+        print("Ajout annulé.")
+        return
+
+    run("git add " + " ".join(f'"{x}"' for x in to_add))
+
     print("\nVérification : voici les fichiers prêts à être commités :")
     run("git status")
+
     msg = input("\nMessage de commit (laisse vide pour 'MAJ auto admin') :\n> ").strip()
     if not msg:
         msg = "MAJ auto admin"
     run(f'git commit -m "{msg}"')
 
-    # Proposer de tagger le commit
+    # Option TAG
     tag = input("\nAjouter un tag à ce commit ? (nom du tag, vide pour ignorer) :\n> ").strip()
     if tag:
-        run(f'git tag {tag}')
+        # Tag name must not contain brackets, spaces, etc.
+        import re
+        safe_tag = re.sub(r"[^\w.-]", "_", tag)
+        if safe_tag != tag:
+            print(f"Nom du tag modifié pour conformité : {safe_tag}")
+        run(f"git tag {safe_tag}")
 
-    print("\nPUSH vers Framagit...")
-    run("git pull --rebase frama main")
-    run("git push frama main")
-    if tag:
-        run(f"git push frama {tag}")
+    print("\nPUSH vers Framagit (frama)...")
+    # Astuce : pour éviter les rejects, faire un pull --rebase avant push
+    run("git pull --rebase frama main", check=False)
+    run("git push frama main", check=False)
 
-    print("\nPUSH vers GitHub...")
-    run("git push origin main")
-    if tag:
-        run(f"git push origin {tag}")
+    print("\nPUSH vers GitHub (origin)...")
+    run("git push origin main", check=False)
 
     print("\n✅ Terminé ! Vérifie sur Framagit ET GitHub.")
+
     print("\nQuelques commandes utiles pour l'admin :")
     print("  git status     # Voir les fichiers modifiés/non suivis")
     print("  git log -n 5   # Voir les 5 derniers commits")
