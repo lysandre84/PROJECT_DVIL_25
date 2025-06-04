@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 # -------------------------------------------------------------------------------------
 #
-#    /$$$$$$$  /$$    /$$ /$$$$$$ /$$             /$$    /$$  /$$$$$$
-#   | $$__  $$| $$   | $$|_  $$_/| $$            | $$   | $$ /$$$_  $$
-#   | $$  \ $$| $$   | $$  | $$  | $$            | $$   | $$| $$$$\ $$
-#   | $$  | $$|  $$ / $$/  | $$  | $$            |  $$ / $$/| $$ $$ $$
-#   | $$  | $$ \  $$ $$/   | $$  | $$             \  $$ $$/ | $$\ $$$$
-#   | $$  | $$  \  $$$/    | $$  | $$              \  $$$/  | $$ \ $$$
-#   | $$$$$$$/   \  $/    /$$$$$$| $$$$$$$$         \  $/   |  $$$$$$/
-#   |_______/     \_/    |______/|________/          \_/     \______/
+#  $$$$$$$\  $$\    $$\ $$$$$$\ $$\             $$\    $$\  $$$$$$\  
+#  $$  __$$\ $$ |   $$ |\_$$  _|$$ |            $$ |   $$ |$$ ___$$\ 
+#  $$ |  $$ |$$ |   $$ |  $$ |  $$ |            $$ |   $$ |\_/   $$ |
+#  $$ |  $$ |\$$\  $$  |  $$ |  $$ |            \$$\  $$  |  $$$$$ / 
+#  $$ |  $$ | \$$\$$  /   $$ |  $$ |             \$$\$$  /   \___$$\ 
+#  $$ |  $$ |  \$$$  /    $$ |  $$ |              \$$$  /  $$\   $$ |
+#  $$$$$$$  |   \$  /   $$$$$$\ $$$$$$$$\          \$  /   \$$$$$$  |
+#  \_______/     \_/    \______|\________|          \_/     \______/ 
 #
 # ----------------------------------------------------------------------------------
 __version__ = "1.0.0"  # DVIL Secure // Version sécurisée (Trois vulnérabilitées).
@@ -491,6 +491,42 @@ def admin_users():
     # Affiche la gestion des utilisateurs pour l'admin
     users = User.query.all()
     return render_template("admin_users.html", users=users)
+
+
+
+@app.route("/admin/log_filter", methods=["POST"])
+@require_auth
+@require_admin
+def admin_log_filter():
+    data = request.get_json() or {}
+    log_type = data.get("log_type", "api").lower()
+
+    # Mapping types de logs
+    log_paths = {
+        "api":        "logs/api.log",
+        "serveur":    "logs/serveur.log",
+        "clavier":    "logs/clavier.log",
+        "info-clavier": "logs/info-clavier.log",
+        "nfc":        "logs/nfc.log",
+        "keypad":     "logs/keypad_raw.log",
+        "challenge":  "logs/challenge.log",
+        "api-challenge": "logs/api-challenge.log",
+    }
+    log_file = log_paths.get(log_type, "logs/api.log")
+
+    try:
+        if not os.path.exists(log_file):
+            return jsonify({"lines": [], "error": f"Fichier {log_file} non trouvé"}), 200
+
+        with open(log_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()[-150:]  # Affiche les 150 dernières lignes
+
+        # Nettoyage + on retourne en JSON
+        lines = [line.strip() for line in lines if line.strip()]
+        return jsonify({"lines": lines}), 200
+
+    except Exception as e:
+        return jsonify({"lines": [], "error": f"Erreur lecture log : {str(e)}"}), 500
 
 @app.route("/admin/logs")
 @require_auth

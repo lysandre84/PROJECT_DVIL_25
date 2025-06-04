@@ -19,35 +19,48 @@
 =================================================================================
 -->
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Métadonnées principales -->
     <meta charset="UTF-8">
     <title>Logs en Temps Réel</title>
-    <!-- Police Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Feuille de style spécifique logs admin -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_logs.css') }}">
 </head>
 <body>
-    <!-- Conteneur principal des logs -->
     <div class="admin-container">
         <h1>Logs en Temps Réel</h1>
-        <!-- Zone qui affiche les logs (remplie dynamiquement en JS) -->
-        <div id="log-container">Chargement...</div>
+        <!-- Sélecteur de type -->
+        <div style="margin-bottom: 10px;">
+            <label for="log-type-select" style="font-weight: bold; color: #FF4040;">Type de logs :</label>
+            <select id="log-type-select">
+                <option value="SERVEUR">Serveur</option>
+                <option value="Clavier-I²C">Clavier I²C</option>
+                <option value="INFO-CLAVIER">Info Clavier</option>
+                <option value="NFC">NFC</option>
+                <option value="API" selected>API</option>
+                <option value="API-challenge">API Challenge</option>
+            </select>
+        </div>
+        <!-- Légende couleurs -->
+        <div id="log-legend">
+            <span class="api-log">API</span> /
+            <span class="cat-serv">Serveur</span> /
+            <span class="cat-clav">Clavier</span> /
+            <span class="cat-info">Info Clavier</span> /
+            <span class="cat-nfc">NFC</span> /
+            <span class="cat-api">API Challenge</span>
+        </div>
+        <!-- Zone d'affichage logs -->
+        <div id="logs-container" class="logs-box"></div>
+        <button id="reset-logs-btn" class="btn reset-btn">Reset Logs</button>
     </div>
-    <!-- Bouton pour reset les logs -->
-    <button id="reset-logs-btn" class="btn reset-btn"> Reset Logs </button>
-    <!-- Bouton retour vers le panel admin -->
     <a href="/admin" class="back-return-btn">⬅️ Retour</a>
-    <!-- Logo en bas à droite -->
     <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="Logo" class="logo">
-    <!-- Footer -->
     <footer>
         <p>© 2025 - Admin Panel</p>
     </footer>
-    <!-- JS spécifique pour logs -->
     <script src="{{ url_for('static', filename='js/admin_logs.js') }}"></script>
 </body>
 </html>

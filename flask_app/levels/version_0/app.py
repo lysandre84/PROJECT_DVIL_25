@@ -492,6 +492,41 @@ def admin_users():
     users = User.query.all()
     return render_template("admin_users.html", users=users)
 
+@app.route("/admin/log_filter", methods=["POST"])
+@require_auth
+@require_admin
+def admin_log_filter():
+    """
+    Endpoint pour filtrer et retourner les logs demandés.
+    Attendu : JSON { "log_type": "api" }  (ou "serveur", "clavier", etc.)
+    """
+    data = request.get_json()
+    log_type = data.get("log_type", "").lower()
+
+    # Mapping des types de logs vers leur chemin
+    log_paths = {
+        "api": "logs/api.log",
+        "serveur": "logs/serveur.log",
+        "clavier": "logs/clavier.log",
+        "nfc": "logs/nfc.log",
+        "keypad": "logs/keypad_raw.log",
+        "challenge": "logs/challenge.log",
+    }
+    # Par défaut : log API si rien ou inconnu
+    log_file = log_paths.get(log_type, "logs/api.log")
+
+    # Lecture du log
+    try:
+        if not os.path.exists(log_file):
+            raise FileNotFoundError(f"No such file or directory: '{log_file}'")
+        with open(log_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+        return jsonify({"lines": lines, "error": None})
+    except FileNotFoundError as e:
+        return jsonify({"lines": [], "error": f"Erreur lecture log : {str(e)}"})
+    except Exception as e:
+        return jsonify({"lines": [], "error": f"Erreur inattendue lors de la lecture du log : {str(e)}"})
+
 @app.route("/admin/logs")
 @require_auth
 @require_admin

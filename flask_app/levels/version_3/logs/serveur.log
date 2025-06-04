@@ -3,3 +3,28 @@
 2025-05-26 00:46:25,319 [SERVEUR] Status consulté (verrouillée)
 2025-05-26 00:48:14,575 [SERVEUR] [MQTT] Serrure => locked=False
 2025-05-26 00:48:14,819 [SERVEUR] Status consulté (déverrouillée)
+2025-05-28 10:53:53,763 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 10:54:17,828 [SERVEUR] Status consulté (verrouillée)
+2025-05-28 10:56:36,355 [SERVEUR] [MQTT] Connecté au broker
+2025-06-02 13:56:09,290 [SERVEUR] Status consulté (verrouillée)
+2025-06-02 18:21:39,613 [SERVEUR] Déverrouillage par API
+2025-06-02 18:21:39,654 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-02 18:21:41,328 [SERVEUR] Status consulté (déverrouillée)
+2025-06-03 11:55:38,001 [SERVEUR] [MQTT] Connecté au broker
+2025-06-03 13:14:14,970 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:14:15,001 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:37:18,895 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:37:18,907 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:37:23,209 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:37:23,216 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:38:10,472 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:38:10,481 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:38:12,183 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:38:12,191 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:38:23,533 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 13:38:23,546 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 14:41:10,130 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 14:41:10,139 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 14:41:21,491 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 14:41:21,507 [SERVEUR] [MQTT] Serrure => locked=False
+2025-06-03 15:13:50,089 [SERVEUR] Status consulté (déverrouillée)

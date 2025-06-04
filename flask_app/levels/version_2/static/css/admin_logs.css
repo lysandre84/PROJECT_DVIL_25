@@ -28,153 +28,211 @@
 =================================================================================
 */
 
-/* Corps principal de la page */
 body {
-    margin: 0;                                       /* Pas de marge par défaut */
-    font-family: 'Roboto', sans-serif;                /* Police moderne */
-    background-color: #121212;                        /* Fond sombre */
-    color: #e0e0e0;                                  /* Texte gris clair */
-    height: 100vh;                                   /* Hauteur totale */
-    display: flex;                                   /* Flexbox pour centrage */
-    flex-direction: column;                          /* Colonnes */
-    justify-content: center;                         /* Centre verticalement */
-    align-items: center;                             /* Centre horizontalement */
-    text-align: center;                              /* Centre le texte */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #101929; /* Fond bleu nuit profond */
+    color: #01eaff; /* Bleu électrique global */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Conteneur principal des logs */
 .admin-container {
-    background: rgba(20, 20, 20, 0.95);              /* Fond noir translucide */
-    padding: 30px;                                   /* Espacement interne */
-    border-radius: 8px;                              /* Coins arrondis */
-    box-shadow: 0 0 15px rgba(0, 207, 255, 0.5);     /* Glow bleu néon */
-    max-width: 900px;                                /* Largeur max */
-    width: 90%;                                      /* Largeur responsive */
-    overflow-x: auto;                                /* Scroll horizontal si besoin */
+    background: rgba(12, 24, 40, 0.98);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 38px #01eaffcc, 0 0 12px 3px #0099ff99;
+    max-width: 900px;
+    width: 90%;
+    overflow-x: auto;
+    margin: 40px auto;
+    border: 2px solid #01eaff;
 }
 
-/* Titre principal */
 h1 {
-    font-size: 2rem;                                 /* Gros titre */
-    color: #00cfff;                                  /* Bleu néon */
+    font-size: 2.2rem;
+    color: #01eaff;
+    text-shadow: 0 0 17px #01eaffcc, 0 0 25px #00c6ffcc, 0 0 6px #00eaff99;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
 }
 
-/* Zone d'affichage des logs */
-#log-container {
-    height: 400px;                                   /* Hauteur fixe scrollable */
-    overflow-y: auto;                                /* Scroll vertical */
-    border: 2px solid rgba(0, 207, 255, 0.5);        /* Bordure bleu néon */
-    background: rgba(0, 0, 0, 0.3);                  /* Fond semi-transparent */
-    padding: 15px;                                   /* Espacement interne */
-    text-align: left;                                /* Aligne les logs à gauche */
-    font-size: 14px;                                 /* Taille texte logs */
-    width: 100%;
-    max-width: 800px;                                /* Largeur max */
-    margin-top: 20px;                                /* Espace au-dessus */
-}
-
-/* Style de chaque ligne de log */
-.log-entry {
-    font-size: 14px;                                 /* Taille texte */
-    padding: 5px;                                    /* Espacement vertical */
-    border-bottom: 1px solid rgba(0, 207, 255, 0.3); /* Séparateur bleu néon */
-    word-break: break-all;                           /* Coupe les mots trop longs */
-}
-
-/* Dernière log : animation clignotante */
-.log-entry:last-child {
-    animation: blink 0.5s alternate infinite;
-}
-
-/* Animation de clignotement pour la dernière ligne */
-@keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0.6; }
-}
-
-/* Bouton de retour (bas gauche) */
-.back-return-btn {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    background-color: #444;                          /* Fond gris */
-    color: #fff;                                     /* Texte blanc */
-    padding: 10px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 1rem;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-    z-index: 2;                                      /* Devant les logs */
-}
-.back-return-btn:hover {
-    opacity: 1;
-    background-color: #0099cc;                       /* Bleu sombre au survol */
-}
-
-/* Logo fixe bas droite */
-.logo {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 60px;
-    height: auto;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px #00cfff);           /* Glow bleu */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    animation: pulseGlow 1.5s infinite alternate;     /* Animation de glow pulsée */
-}
-.logo:hover {
-    opacity: 1;
-    transform: scale(1.1) rotate(2deg);              /* Grossit et tourne au survol */
-    filter: drop-shadow(0 0 20px #0099cc);           /* Glow accentué */
-}
-
-/* Animation de glow pulsé pour le logo */
-@keyframes pulseGlow {
-    0% { filter: drop-shadow(0 0 10px #00cfff); }
-    100% { filter: drop-shadow(0 0 20px #0099cc); }
-}
-
-/* Pied de page */
-footer {
-    font-size: 0.8rem;                               /* Petite taille */
-    color: #888;                                     /* Gris clair */
-    margin-top: 20px;                                /* Espace au-dessus */
-}
-
-/* Couleurs de catégories de logs */
-.api-log      { color: #00cfff; }                    /* API : bleu vif */
-.mqtt-log     { color: #80e4ff; }                    /* MQTT : bleu clair */
-.cat-serv     { color: #aeefff; }                    /* SERVEUR : bleu pâle */
-.cat-clav     { color: #43bbff; }                    /* Clavier : bleu cyan */
-.cat-info     { color: #b2eaff; }                    /* INFO-CLAVIER : bleu pâle */
-.cat-nfc      { color: #428aff; }                    /* NFC : bleu moyen */
-.cat-api      { color: #42eaff; }                    /* API-challenge : bleu flashy */
-.log-error    { color: #00cfff; background: #0d1a22; } /* Ligne erreur : bleu/fond sombre */
-.log-warning  { color: #ffe066; }                    /* Warning : jaune */
-
-/* Bouton reset logs (centré et en bleu) */
-.btn.reset-btn {
-    background: #097eae;                             /* Bleu foncé */
-    color: #fff;                                     /* Texte blanc */
-    border: none;
+/* Selecteur */
+#log-type-select {
+    background: #111926;
+    color: #01eaff;
     border-radius: 8px;
+    border: 1px solid #01eaffcc;
+    padding: 4px 12px;
+    font-size: 1rem;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 0 11px #01eaff44;
+}
+label[for="log-type-select"] {
+    font-weight: bold;
+    color: #01eaff;
+}
+
+#log-legend {
+    margin: 8px 0 18px 0;
+    font-size: 1.10em;
+}
+#log-legend span {
+    font-weight: bold;
+    margin: 0 3px;
+    padding: 2px 9px;
+    border-radius: 7px;
+    background: #152032;
+    color: #00f6ff;
+    box-shadow: 0 0 10px #00eaff44;
+}
+
+/* Zone logs */
+#logs-container, .logs-box {
+    height: 400px;
+    overflow-y: auto;
+    background: #12203a;
+    border-radius: 11px;
+    border: 2px solid #01eaff;
+    color: #d2f7ff;
+    padding: 16px;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    box-shadow: 0 0 24px #00eaff44;
+}
+
+.log-entry {
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 1px solid #01eaff33;
+    word-break: break-all;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    transition: background 0.18s;
+    white-space: pre-wrap;
+}
+.log-entry:first-child {
+    background: rgba(1,234,255,0.12);
+    font-weight: bold;
+    animation: blink 1s alternate infinite;
+}
+@keyframes blink {
+    0%   { background: rgba(1,234,255,0.11);}
+    100% { background: rgba(1,234,255,0.24);}
+}
+.log-repeat {
+    color: #fff75a;
+    font-size: 0.92em;
+    margin-left: 10px;
+    font-weight: bold;
+    background: rgba(16,40,60,0.13);
+    padding: 2px 9px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00eaff22;
+}
+
+/* COULEURS CATEGORIES BLEU ELECTRIQUE & punch */
+.api-log      { color: #00fff7; font-weight: bold; text-shadow: 0 0 17px #00fff7bb, 0 0 10px #00eaff88;}
+.cat-serv     { color: #2979FF; font-weight: bold; text-shadow: 0 0 13px #2979FFcc, 0 0 8px #448AFF99;}
+.cat-clav     { color: #69fffe; font-weight: bold; text-shadow: 0 0 13px #00fff999;}        /* Clavier bleu-cyan */
+.cat-info     { color: #ffe156; font-weight: bold; text-shadow: 0 0 12px #ffe156bb;}        /* Info Jaune flash */
+.cat-nfc      { color: #ff54ec; font-weight: bold; text-shadow: 0 0 13px #ff54ecbb;}        /* NFC magenta flash */
+.cat-api      { color: #ffd600; font-weight: bold; text-shadow: 0 0 15px #ffd600bb;}        /* Challenge jaune néon */
+
+/* Select couleur options */
+#log-type-select option[value="API"]           { color: #00fff7; }
+#log-type-select option[value="SERVEUR"]       { color: #2979FF; }
+#log-type-select option[value="Clavier-I²C"]   { color: #69fffe; }
+#log-type-select option[value="INFO-CLAVIER"]  { color: #ffe156; }
+#log-type-select option[value="NFC"]           { color: #ff54ec; }
+#log-type-select option[value="API-challenge"] { color: #ffd600; }
+
+/* Légende */
+#log-legend .api-log      { color: #00fff7; }
+#log-legend .cat-serv     { color: #2979FF; }
+#log-legend .cat-clav     { color: #69fffe; }
+#log-legend .cat-info     { color: #ffe156; }
+#log-legend .cat-nfc      { color: #ff54ec; }
+#log-legend .cat-api      { color: #ffd600; }
+
+/* Bouton reset logs */
+.btn.reset-btn, #reset-logs-btn {
+    background: linear-gradient(90deg, #01eaff 35%, #003cff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
     padding: 10px 24px;
     font-size: 1rem;
     font-weight: bold;
     margin: 10px auto 0 auto;
     display: block;
     cursor: pointer;
-    box-shadow: 0 0 10px 2px rgba(9, 126, 174, 0.5);  /* Ombre bleue */
+    box-shadow: 0 0 15px 2px #01eaff77;
     transition: background 0.2s, box-shadow 0.2s;
 }
-.btn.reset-btn:hover, .btn.reset-btn:focus {
-    background: #00cfff;                             /* Plus clair au survol */
-    box-shadow: 0 0 15px 3px rgba(0, 207, 255, 0.7); /* Glow accentué */
+.btn.reset-btn:hover, #reset-logs-btn:hover, #reset-logs-btn:focus {
+    background: #01eaff;
+    box-shadow: 0 0 20px 4px #01eaffcc;
     outline: none;
 }
-#reset-logs-btn {
-    margin-left: auto;
-    margin-right: auto;
+
+.back-return-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #163f61;
+    color: #01eaff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.89;
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 2;
+    box-shadow: 0 0 11px #01eaff33;
+    border: 1px solid #01eaff77;
+}
+.back-return-btn:hover {
+    opacity: 1;
+    background-color: #0d2541;
+    color: #ffe156;
+    border-color: #ffe156;
+}
+
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.96;
+    filter: drop-shadow(0 0 21px #01eaff);
+    transition: transform 0.3s, filter 0.3s;
+    animation: pulseGlow 1.6s infinite alternate;
+}
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 40px #00eaff);
+}
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 15px #00eaff);}
+    100% { filter: drop-shadow(0 0 38px #00fff7);}
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #70eaff;
+    margin-top: 22px;
 }

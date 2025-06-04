@@ -72,3 +72,11 @@
 2025-05-26 01:18:25,144 [SERVEUR] Status consulté (verrouillée)
 2025-05-26 01:18:30,206 [SERVEUR] [MQTT] Serrure => locked=False
 2025-05-26 01:18:30,489 [SERVEUR] Status consulté (déverrouillée)
+2025-05-28 09:56:16,857 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 10:03:08,599 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 10:05:37,726 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 10:06:37,480 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 10:08:41,529 [SERVEUR] [MQTT] Connecté au broker
+2025-05-28 10:41:50,282 [SERVEUR] [MQTT] Connecté au broker
+2025-06-03 15:18:01,978 [SERVEUR] [MQTT] Connecté au broker
+2025-06-03 15:18:02,108 [SERVEUR] Status consulté (verrouillée)

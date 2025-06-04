@@ -28,12 +28,11 @@
 =================================================================================
 */
 
-/* ======= Admin Logs Page - Matrix ======= */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #141b25;
+    color: #00ffa2; /* Vert pour l’ambiance globale V1 */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -42,115 +41,132 @@ body {
     text-align: center;
 }
 
-/* Conteneur principal */
 .admin-container {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(15, 27, 48, 0.97);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 0 30px #00ffae88, 0 0 10px 2px #00ffae55;
     max-width: 900px;
     width: 90%;
     overflow-x: auto;
+    margin: 40px auto;
+    border: 2px solid #00ffae;
 }
 
-/* Titre principal */
 h1 {
     font-size: 2rem;
-    color: #39ff14;
+    color: #00ffa2;
+    text-shadow: 0 0 14px #01eaffbb, 0 0 24px #00f0ae88;
+    margin-bottom: 18px;
 }
 
-/* Zone d'affichage des logs */
-#log-container {
+/* Selecteur */
+#log-type-select {
+    background: #111926;
+    color: #00ffa2;
+    border-radius: 7px;
+    border: 1px solid #00ffa299;
+    padding: 4px 10px;
+    font-size: 1rem;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 0 8px #00ffa233;
+}
+label[for="log-type-select"] {
+    font-weight: bold;
+    color: #00ffa2;
+}
+
+#log-legend {
+    margin: 6px 0 16px 0;
+    font-size: 1.06em;
+}
+#log-legend span {
+    font-weight: bold;
+    margin: 0 2px;
+    padding: 2px 8px;
+    border-radius: 7px;
+    background: #101c28;
+    color: #fff;
+    box-shadow: 0 0 8px #00ffa244;
+}
+
+/* Zone logs */
+#logs-container, .logs-box {
     height: 400px;
     overflow-y: auto;
-    border: 2px solid rgba(57, 255, 20, 0.5);
-    background: rgba(0, 0, 0, 0.3);
+    background: #101b17;
+    border-radius: 10px;
+    border: 2px solid #00ffae;
+    color: #c0ffd7;
     padding: 15px;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-size: 0.98rem;
     text-align: left;
-    font-size: 14px;
+    margin-bottom: 18px;
     width: 100%;
     max-width: 800px;
     margin-top: 20px;
+    box-shadow: 0 0 18px #00ffae55;
 }
 
-/* Style ligne de log */
 .log-entry {
     font-size: 14px;
     padding: 5px;
-    border-bottom: 1px solid rgba(57, 255, 20, 0.3);
+    border-bottom: 1px solid #00ffae44;
     word-break: break-all;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    transition: background 0.18s;
+    white-space: pre-wrap;
 }
-.log-entry:last-child {
-    animation: blink 0.5s alternate infinite;
+.log-entry:first-child {
+    background: rgba(0,255,162,0.10);
+    font-weight: bold;
+    animation: blink 1s alternate infinite;
 }
 @keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0.6; }
+    0%   { background: rgba(0,255,162,0.08);}
+    100% { background: rgba(0,255,162,0.17);}
+}
+.log-repeat {
+    color: #11ff92;
+    font-size: 0.9em;
+    margin-left: 8px;
+    font-weight: bold;
+    background: rgba(0,90,60,0.13);
+    padding: 2px 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00ffa222;
 }
 
-/* Bouton de retour */
-.back-return-btn {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    background-color: #444;
-    color: #fff;
-    padding: 10px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 1rem;
-    opacity: 0.8;
-    transition: opacity 0.3s, background-color 0.3s;
-    z-index: 2;
-}
-.back-return-btn:hover {
-    opacity: 1;
-    background-color: #179900;
-}
+/* COULEURS PUNCHY PAR CATÉGORIE */
+.api-log      { color: #00e7ff; font-weight: bold; text-shadow: 0 0 14px #01f7ffbb, 0 0 6px #38f0ff77;} /* API */
+.cat-serv     { color: #ff2b51; font-weight: bold; text-shadow: 0 0 14px #ff0a33aa, 0 0 6px #ff88a988;} /* SERVEUR */
+.cat-clav     { color: #f6ff00; font-weight: bold; text-shadow: 0 0 13px #f6ff0088;} /* CLAVIER */
+.cat-info     { color: #56ffc1; font-weight: bold; text-shadow: 0 0 12px #31ffb177;} /* INFO-CLAVIER */
+.cat-nfc      { color: #ff8bff; font-weight: bold; text-shadow: 0 0 13px #e755ec77;} /* NFC */
+.cat-api      { color: #00ff88; font-weight: bold; text-shadow: 0 0 14px #00ff8888, 0 0 7px #11ffbbcc;} /* API-challenge ou Challenge 1 = VERT */
 
-/* Logo bas droite */
-.logo {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 60px;
-    height: auto;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px #39ff14);
-    transition: transform 0.3s, filter 0.3s;
-    animation: pulseGlow 1.5s infinite alternate;
-}
-.logo:hover {
-    opacity: 1;
-    transform: scale(1.1) rotate(2deg);
-    filter: drop-shadow(0 0 20px #179900);
-}
-@keyframes pulseGlow {
-    0% { filter: drop-shadow(0 0 10px #39ff14);}
-    100% { filter: drop-shadow(0 0 20px #179900);}
-}
+/*Paramétre couleurs du select*/
+#log-type-select option[value="API"]           { color: #00e7ff; }
+#log-type-select option[value="SERVEUR"]       { color: #ff2b51; }
+#log-type-select option[value="Clavier-I²C"]   { color: #f6ff00; }
+#log-type-select option[value="INFO-CLAVIER"]  { color: #56ffc1; }
+#log-type-select option[value="NFC"]           { color: #ff8bff; }
+#log-type-select option[value="API-challenge"] { color: #00ff88; }
 
-/* Footer */
-footer {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 20px;
-}
-
-/* Couleurs catégories logs */
-.api-log      { color: #39ff14; }
-.mqtt-log     { color: #aaffaa; }
-.cat-serv     { color: #a4ffb4; }
-.cat-clav     { color: #ffa142; }
-.cat-info     { color: #adffad; }
-.cat-nfc      { color: #42ff98; }
-.cat-api      { color: #42fff5; }
-.log-error    { color: #39ff14; background: #112d10; }
-.log-warning  { color: #ffe066; }
+/* Légende en couleurs aussi */
+#log-legend .api-log      { color: #00e7ff; }
+#log-legend .cat-serv     { color: #ff2b51; }
+#log-legend .cat-clav     { color: #f6ff00; }
+#log-legend .cat-info     { color: #56ffc1; }
+#log-legend .cat-nfc      { color: #ff8bff; }
+#log-legend .cat-api      { color: #00ff88; }
 
 /* Bouton reset logs */
-.btn.reset-btn {
-    background: #179900;
+.btn.reset-btn, #reset-logs-btn {
+    background: linear-gradient(90deg, #00ffae 25%, #00c974 100%);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -160,15 +176,61 @@ footer {
     margin: 10px auto 0 auto;
     display: block;
     cursor: pointer;
-    box-shadow: 0 0 10px 2px rgba(57,255,20,0.5);
+    box-shadow: 0 0 12px 2px #00ffae77;
     transition: background 0.2s, box-shadow 0.2s;
 }
-.btn.reset-btn:hover, .btn.reset-btn:focus {
-    background: #39ff14;
-    box-shadow: 0 0 15px 3px rgba(57,255,20,0.7);
+.btn.reset-btn:hover, #reset-logs-btn:hover, #reset-logs-btn:focus {
+    background: #00ffae;
+    box-shadow: 0 0 18px 3px #00ffaecc;
     outline: none;
 }
-#reset-logs-btn {
-    margin-left: auto;
-    margin-right: auto;
+
+.back-return-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #184134;
+    color: #00ff88;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.86;
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 2;
+    box-shadow: 0 0 10px #00ffae33;
+    border: 1px solid #00ffae66;
+}
+.back-return-btn:hover {
+    opacity: 1;
+    background-color: #031a0e;
+    color: #00ff88;
+    border-color: #00ff88;
+}
+
+.logo {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: auto;
+    opacity: 0.93;
+    filter: drop-shadow(0 0 20px #00ff88);
+    transition: transform 0.3s, filter 0.3s;
+    animation: pulseGlow 1.5s infinite alternate;
+}
+.logo:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 34px #00ff88);
+}
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 14px #00ffae);}
+    100% { filter: drop-shadow(0 0 34px #00ff88);}
+}
+
+footer {
+    font-size: 0.8rem;
+    color: #60ffbd;
+    margin-top: 20px;
 }

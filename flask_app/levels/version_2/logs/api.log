@@ -1,3 +1,82 @@
 2025-05-25 20:15:24,154 [API] LOGIN de PentesterLab réussi
 2025-05-25 20:49:19,454 [API] LOGIN de PentesterLab réussi
 2025-05-25 20:58:30,445 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 15:53:22,533 [API] [API] Echec ouverture clavier avec code: 7777
+2025-06-03 15:53:26,984 [API] [API] Echec ouverture clavier avec code: 7777
+2025-06-03 15:54:09,490 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 15:54:23,487 [API] [API] Echec ouverture clavier avec code: 1178
+2025-06-03 15:54:29,989 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 15:58:20,532 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 15:59:17,986 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:00:28,490 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:00:41,487 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:01:08,484 [API] [API] Echec ouverture clavier avec code: 1781
+2025-06-03 16:01:14,988 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:01:22,485 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:01:27,984 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:01:37,484 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:01:44,484 [API] [API] Echec ouverture clavier avec code: 1234
+2025-06-03 16:01:59,502 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:02:05,986 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:02:54,984 [API] [API] Echec ouverture clavier avec code: 1472
+2025-06-03 16:03:00,483 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:03:44,487 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:03:49,984 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:04:00,987 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:04:08,484 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:04:41,982 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:04:48,985 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:05:08,486 [API] [API] Echec ouverture clavier avec code: 2478
+2025-06-03 16:05:14,983 [API] [API] Echec ouverture clavier avec code: 2478
+2025-06-03 16:05:22,983 [API] [API] Echec ouverture clavier avec code: 1563
+2025-06-03 16:05:38,485 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:06:14,985 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:06:25,983 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:07:06,984 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:07:14,482 [API] [API] Echec ouverture clavier avec code: 4444
+2025-06-03 16:07:24,484 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:07:28,981 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:07:33,482 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:07:44,484 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:07:58,987 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:08:07,985 [API] [API] Echec ouverture clavier avec code: 6532
+2025-06-03 16:08:15,485 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:08:49,985 [API] [API] Echec ouverture clavier avec code: 6666
+2025-06-03 16:09:50,984 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:09:58,484 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:10:22,484 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:10:44,484 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:10:52,484 [API] [API] Echec ouverture clavier avec code: 3698
+2025-06-03 16:10:59,987 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:11:09,987 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:11:24,485 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:11:29,983 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:11:41,483 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:11:44,984 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:11:52,987 [API] [API] Echec ouverture clavier avec code: 2178
+2025-06-03 16:12:04,485 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:12:11,984 [API] [API] Echec ouverture clavier avec code: 2563
+2025-06-03 16:12:16,988 [API] [API] Echec ouverture clavier avec code: 2365
+2025-06-03 16:13:45,485 [API] [API] Echec ouverture clavier avec code: 1178
+2025-06-03 16:13:52,152 [API] [API] Echec ouverture clavier avec code: 8965
+2025-06-03 16:13:57,863 [API] [API] Echec ouverture clavier avec code: 0000
+2025-06-03 16:14:04,486 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:14:09,487 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:14:13,483 [API] [API] Echec ouverture clavier avec code: 9999
+2025-06-03 16:14:18,483 [API] [API] Echec ouverture clavier avec code: 9999
+2025-06-03 16:15:31,485 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:16:10,487 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:16:14,484 [API] [API] Echec ouverture clavier avec code: 0000
+2025-06-03 16:16:18,983 [API] [API] Echec ouverture clavier avec code: 5555
+2025-06-03 16:16:22,954 [API] [API] Echec ouverture clavier avec code: 9999
+2025-06-03 16:16:25,984 [API] [API] Echec ouverture clavier avec code: 9999
+2025-06-03 16:18:30,483 [API] [API] Echec ouverture clavier avec code: 1477
+2025-06-03 16:18:36,483 [API] [API] Echec ouverture clavier avec code: 7777
+2025-06-03 16:19:37,992 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:19:59,487 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:20:33,488 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:25:00,528 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:25:46,987 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:25:50,485 [API] [API] Echec ouverture clavier avec code: 1111
+2025-06-03 16:26:44,987 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
+2025-06-03 16:33:38,527 [API] [API] UNLOCK par alice (id=6, role=user) : Déverrouillage par clavier
