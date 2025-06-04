@@ -37,7 +37,7 @@ def get_git_paths():
     return all_paths
 
 def main():
-    print("=== 🚀 PUSHEUR GIT Framagit & GitHub ===")
+    print("===  PUSHEUR GIT Framagit & GitHub ===")
     print("État du dépôt actuel :")
     run("git status")
 
@@ -110,7 +110,7 @@ def main():
     print("\nPUSH vers GitHub (origin)...")
     run("git push origin main", check=False)
 
-    print("\n✅ Terminé ! Vérifie sur Framagit ET GitHub.")
+    print("\n Terminé ! Vérifie sur Framagit ET GitHub.")
 
     print("\nQuelques commandes utiles pour l'admin :")
     print("  git status     # Voir les fichiers modifiés/non suivis")
